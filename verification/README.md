@@ -110,21 +110,3 @@ $\rho\otimes\rho^*$, with target fidelity $1/4$ for the flat rank-two case.
 
 These controls diagnose the direct Bell protocol. The arbitrary-processor lower
 bound is a separate analytic result, not an inference from these examples.
-
-## Hosted mathematics
-
-The [Hosted mathematics workflow](../.github/workflows/hosted-mathematics.yml)
-checks the actual GitHub rendering of every Markdown page at the inspected commit.
-It runs on pull requests and can also be started manually with a full commit SHA.
-The job has read-only repository permissions, uses pinned comparison tools, and
-opens anonymous browser contexts at widths 1440 and 760 pixels.
-
-The report compares every recognized source expression with its hosted MathML,
-including structure, operands, subscripts, relations, labels and table-cell
-coverage. It also checks bounded display geometry. Each run uploads the report,
-captured HTML and screenshots as an artifact retained for fourteen days. The
-report records the exact commit, tree, page scope and source hashes.
-
-This automated comparison complements inspection of the screenshots for readable
-equation layout and navigation. It does not establish scientific correctness or
-guarantee future rendering after GitHub changes its renderer.
