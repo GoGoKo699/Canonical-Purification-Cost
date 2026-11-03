@@ -1,6 +1,6 @@
 # Canonical Purification Cost
 
-This repository studies the total-copy cost of preparing the canonical purification of a rank-two flat-spectrum state from independent samples of the state and its complex conjugate. The main theorem is Theta(sqrt(d)) at fixed fidelity and success with arbitrary collective processing. An exactly matched purification/conjugate pair with a two-dimensional environment supplies an exact successful output from two specimens with probability 1/4.
+This repository studies the total-copy cost of preparing the canonical purification of a rank-two flat-spectrum state from independent samples of the state and its complex conjugate. The main theorem is Theta(sqrt(d)) at fixed squared fidelity above one half and fixed positive success probability below one, with arbitrary collective processing. An exactly matched purification/conjugate pair with a two-dimensional environment supplies an exact successful output from two specimens with probability 1/4.
 
 ## Scientific routes
 
@@ -13,8 +13,16 @@ This repository studies the total-copy cost of preparing the canonical purificat
 - Closest external and internal antecedents: references/RELATED_WORK.md; structured references: references/references.bib.
 - Numerical reproduction and its limits: verification/README.md.
 
+## Learning routes
+
+- Entry point and relation between the source and the project: learning/README.md.
+- Sole educational anchor: John Watrous, The Theory of Quantum Information (2018).
+- Relevant source sections, adjoint/conjugation notation, root versus squared fidelity, and the additional project mathematics: learning/anchor.md.
+- Exactly thirty project-defined understanding targets, their dependencies and source pointers: learning/milestones.md.
+- For a proof-first reading, use science/README.md and consult the bridge for unfamiliar foundations.
+
 ## Essential distinctions
 
 The theorem counts all source preparations under a hard total-copy cap. It is not an individual lower bound on each stream. The conjugate state is supplied in a known basis; it is not assumed generically available from an unknown source. The constant comparison requires exactly matched conjugation and a constant environmental dimension. Flat spectrum makes the normalized vectorization of rho equal its canonical purification. The source family includes a known vacuum direction. The result concerns quantum output and does not resolve a decision-only sample/query lifting conjecture. Gate-efficient synthesis of the collective filter is not established.
 
-The scientific pages own the proofs. Numerical examples test finite implementations and normalization rather than replace a general proof. Personal learning records and publication planning are outside this repository.
+The scientific pages own the proofs. The learning map organizes their conceptual dependencies, and the bridge explains the transition from the selected source. Numerical examples test finite implementations and normalization rather than replace a general proof.

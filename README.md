@@ -38,6 +38,10 @@ Start with the [model and theorem](science/model.md). The [science guide](scienc
 | What does a matched purification pair provide? | [Access comparison](science/access_comparison.md) |
 | How does this relate to existing purification and program results? | [Related work](references/RELATED_WORK.md) |
 
+## Learn the result
+
+The educational anchor is John Watrous's *The Theory of Quantum Information* (2018). The [learning guide](learning/README.md) connects the relevant foundations to this project's mechanism and proof. Its [source bridge](learning/anchor.md) gives focused section pointers, translates notation and fidelity conventions, and explains the additional mathematics developed here. The [30-milestone map](learning/milestones.md) follows the project from its basic objects to the complete resource comparison.
+
 ## Reproduce the finite checks
 
 The [verification guide](verification/README.md) specifies the environment, command and expected output. The code independently constructs normalized occupation-basis matrices for the complete successful operation. It checks physical normalization, accepted-state factorization, success probabilities and the matched-purification comparison. These finite checks test implementation and normalization; the dimension-uniform theorem follows from the analytical proofs.
