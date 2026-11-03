@@ -1,0 +1,807 @@
+{
+  "description": "Finite matrix checks for the canonical-purification construction.\n\nThe matrices are built in normalized bosonic occupation bases. Projectors are\ncomputed from kernels, independently of the closed-form harmonic weights. This\nprogram checks finite examples; the analytic arguments establish the theorem.\n",
+  "provenance": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "script_sha256": "ecdbf9a0a94f53de9e8144888ddf25497977b8e0399c8c154c2d83bbcf3836c5",
+    "seed": 2317,
+    "absolute_tolerance": 1e-10
+  },
+  "summary": {
+    "passed": true,
+    "construction_cases": 14,
+    "purifier_cases": 4,
+    "maximum_absolute_error": 4.263256414560601e-14,
+    "maximum_KdaggerK_eigenvalue": 1.0,
+    "maximum_factorization_error": 2.3928361139726545e-16,
+    "maximum_success_probability_error": 3.3306690738754696e-16
+  },
+  "construction_cases": [
+    {
+      "d": 2,
+      "N": 1,
+      "input_dimension": 4,
+      "alpha_squared": 0.6666666666666666,
+      "KdaggerK_min_eigenvalue": 0.3333333333333333,
+      "KdaggerK_max_eigenvalue": 1.0,
+      "success_observed": 0.6666666666666663,
+      "success_formula": 0.6666666666666666,
+      "highest_harmonic_weight_observed": 0.4999999999999999,
+      "highest_harmonic_weight_formula": 0.5,
+      "contraction_spectrum_prediction": [
+        {
+          "harmonic_degree": 1,
+          "eigenvalue": 0,
+          "multiplicity": 3
+        },
+        {
+          "harmonic_degree": 0,
+          "eigenvalue": 2,
+          "multiplicity": 1
+        }
+      ],
+      "projected_contraction_nonzero_eigenvalue": 2,
+      "projected_contraction_rank": 1,
+      "errors": {
+        "cp_upper_violation": 0.0,
+        "cp_lower_violation": 0.0,
+        "exact_factorization": 1.584895982136968e-16,
+        "success_probability": 3.3306690738754696e-16,
+        "highest_harmonic_weight": 1.1102230246251565e-16,
+        "extraction_isometry": 0.0,
+        "residual_projector_idempotence": 0.0,
+        "contraction_spectrum": 0.0,
+        "projected_contraction_spectrum": 0.0,
+        "contraction_commutator": 0.0
+      },
+      "passed": true
+    },
+    {
+      "d": 2,
+      "N": 2,
+      "input_dimension": 9,
+      "alpha_squared": 1.0,
+      "KdaggerK_min_eigenvalue": 0.12500000000000014,
+      "KdaggerK_max_eigenvalue": 0.7500000000000004,
+      "success_observed": 0.4999999999999998,
+      "success_formula": 0.5,
+      "highest_harmonic_weight_observed": 0.1666666666666665,
+      "highest_harmonic_weight_formula": 0.16666666666666666,
+      "contraction_spectrum_prediction": [
+        {
+          "harmonic_degree": 2,
+          "eigenvalue": 0,
+          "multiplicity": 5
+        },
+        {
+          "harmonic_degree": 1,
+          "eigenvalue": 4,
+          "multiplicity": 3
+        },
+        {
+          "harmonic_degree": 0,
+          "eigenvalue": 6,
+          "multiplicity": 1
+        }
+      ],
+      "projected_contraction_nonzero_eigenvalue": 4,
+      "projected_contraction_rank": 3,
+      "errors": {
+        "cp_upper_violation": 0.0,
+        "cp_lower_violation": 0.0,
+        "exact_factorization": 9.242544103030793e-17,
+        "success_probability": 2.220446049250313e-16,
+        "highest_harmonic_weight": 1.6653345369377348e-16,
+        "extraction_isometry": 4.440892098500626e-16,
+        "residual_projector_idempotence": 0.0,
+        "contraction_spectrum": 1.9535767373184806e-15,
+        "projected_contraction_spectrum": 1.7763568394002505e-15,
+        "contraction_commutator": 1.7763568394002505e-15
+      },
+      "passed": true
+    },
+    {
+      "d": 2,
+      "N": 3,
+      "input_dimension": 16,
+      "alpha_squared": 1.2,
+      "KdaggerK_min_eigenvalue": 3.831549196791551e-17,
+      "KdaggerK_max_eigenvalue": 0.6000000000000006,
+      "success_observed": 0.19999999999999968,
+      "success_formula": 0.19999999999999998,
+      "highest_harmonic_weight_observed": 0.04999999999999991,
+      "highest_harmonic_weight_formula": 0.05,
+      "contraction_spectrum_prediction": [
+        {
+          "harmonic_degree": 3,
+          "eigenvalue": 0,
+          "multiplicity": 7
+        },
+        {
+          "harmonic_degree": 2,
+          "eigenvalue": 6,
+          "multiplicity": 5
+        },
+        {
+          "harmonic_degree": 1,
+          "eigenvalue": 10,
+          "multiplicity": 3
+        },
+        {
+          "harmonic_degree": 0,
+          "eigenvalue": 12,
+          "multiplicity": 1
+        }
+      ],
+      "projected_contraction_nonzero_eigenvalue": 6,
+      "projected_contraction_rank": 5,
+      "errors": {
+        "cp_upper_violation": 0.0,
+        "cp_lower_violation": 0.0,
+        "exact_factorization": 1.767938978720978e-16,
+        "success_probability": 3.0531133177191805e-16,
+        "highest_harmonic_weight": 9.020562075079397e-17,
+        "extraction_isometry": 4.440892098500626e-16,
+        "residual_projector_idempotence": 1.3218138734103995e-16,
+        "contraction_spectrum": 8.881784197001252e-15,
+        "projected_contraction_spectrum": 2.6645352591003757e-15,
+        "contraction_commutator": 3.552713678800501e-15
+      },
+      "passed": true
+    },
+    {
+      "d": 2,
+      "N": 4,
+      "input_dimension": 25,
+      "alpha_squared": 1.3333333333333333,
+      "KdaggerK_min_eigenvalue": -1.6165262847157504e-16,
+      "KdaggerK_max_eigenvalue": 0.6666666666666671,
+      "success_observed": 0.06666666666666668,
+      "success_formula": 0.06666666666666667,
+      "highest_harmonic_weight_observed": 0.014285714285714284,
+      "highest_harmonic_weight_formula": 0.014285714285714285,
+      "contraction_spectrum_prediction": [
+        {
+          "harmonic_degree": 4,
+          "eigenvalue": 0,
+          "multiplicity": 9
+        },
+        {
+          "harmonic_degree": 3,
+          "eigenvalue": 8,
+          "multiplicity": 7
+        },
+        {
+          "harmonic_degree": 2,
+          "eigenvalue": 14,
+          "multiplicity": 5
+        },
+        {
+          "harmonic_degree": 1,
+          "eigenvalue": 18,
+          "multiplicity": 3
+        },
+        {
+          "harmonic_degree": 0,
+          "eigenvalue": 20,
+          "multiplicity": 1
+        }
+      ],
+      "projected_contraction_nonzero_eigenvalue": 8,
+      "projected_contraction_rank": 7,
+      "errors": {
+        "cp_upper_violation": 0.0,
+        "cp_lower_violation": 1.6165262847157504e-16,
+        "exact_factorization": 2.290576725491297e-16,
+        "success_probability": 1.3877787807814457e-17,
+        "highest_harmonic_weight": 1.734723475976807e-18,
+        "extraction_isometry": 4.440892098500626e-16,
+        "residual_projector_idempotence": 1.623286582903107e-16,
+        "contraction_spectrum": 7.993605777301127e-15,
+        "projected_contraction_spectrum": 7.105427357601002e-15,
+        "contraction_commutator": 2.6645352591003757e-15
+      },
+      "passed": true
+    },
+    {
+      "d": 2,
+      "N": 5,
+      "input_dimension": 36,
+      "alpha_squared": 1.4285714285714286,
+      "KdaggerK_min_eigenvalue": -1.891031218208024e-16,
+      "KdaggerK_max_eigenvalue": 0.7142857142857151,
+      "success_observed": 0.020408163265306107,
+      "success_formula": 0.02040816326530612,
+      "highest_harmonic_weight_observed": 0.003968253968253967,
+      "highest_harmonic_weight_formula": 0.003968253968253968,
+      "contraction_spectrum_prediction": [
+        {
+          "harmonic_degree": 5,
+          "eigenvalue": 0,
+          "multiplicity": 11
+        },
+        {
+          "harmonic_degree": 4,
+          "eigenvalue": 10,
+          "multiplicity": 9
+        },
+        {
+          "harmonic_degree": 3,
+          "eigenvalue": 18,
+          "multiplicity": 7
+        },
+        {
+          "harmonic_degree": 2,
+          "eigenvalue": 24,
+          "multiplicity": 5
+        },
+        {
+          "harmonic_degree": 1,
+          "eigenvalue": 28,
+          "multiplicity": 3
+        },
+        {
+          "harmonic_degree": 0,
+          "eigenvalue": 30,
+          "multiplicity": 1
+        }
+      ],
+      "projected_contraction_nonzero_eigenvalue": 10,
+      "projected_contraction_rank": 9,
+      "errors": {
+        "cp_upper_violation": 0.0,
+        "cp_lower_violation": 1.891031218208024e-16,
+        "exact_factorization": 4.792787905769426e-17,
+        "success_probability": 1.3877787807814457e-17,
+        "highest_harmonic_weight": 8.673617379884035e-19,
+        "extraction_isometry": 4.440892098500626e-16,
+        "residual_projector_idempotence": 1.775154101693996e-16,
+        "contraction_spectrum": 4.263256414560601e-14,
+        "projected_contraction_spectrum": 7.105427357601002e-15,
+        "contraction_commutator": 1.0658141036401503e-14
+      },
+      "passed": true
+    },
+    {
+      "d": 3,
+      "N": 1,
+      "input_dimension": 9,
+      "alpha_squared": 0.5,
+      "KdaggerK_min_eigenvalue": 0.2499999999999997,
+      "KdaggerK_max_eigenvalue": 0.9999999999999998,
+      "success_observed": 0.4999999999999998,
+      "success_formula": 0.5,
+      "highest_harmonic_weight_observed": 0.6666666666666664,
+      "highest_harmonic_weight_formula": 0.6666666666666666,
+      "contraction_spectrum_prediction": [
+        {
+          "harmonic_degree": 1,
+          "eigenvalue": 0,
+          "multiplicity": 8
+        },
+        {
+          "harmonic_degree": 0,
+          "eigenvalue": 3,
+          "multiplicity": 1
+        }
+      ],
+      "projected_contraction_nonzero_eigenvalue": 3,
+      "projected_contraction_rank": 1,
+      "errors": {
+        "cp_upper_violation": 0.0,
+        "cp_lower_violation": 0.0,
+        "exact_factorization": 1.1833899195746348e-16,
+        "success_probability": 2.220446049250313e-16,
+        "highest_harmonic_weight": 2.220446049250313e-16,
+        "extraction_isometry": 0.0,
+        "residual_projector_idempotence": 0.0,
+        "contraction_spectrum": 4.3765148937644505e-16,
+        "projected_contraction_spectrum": 4.3765148937644505e-16,
+        "contraction_commutator": 0.0
+      },
+      "passed": true
+    },
+    {
+      "d": 3,
+      "N": 2,
+      "input_dimension": 36,
+      "alpha_squared": 0.8888888888888888,
+      "KdaggerK_min_eigenvalue": 0.14814814814814806,
+      "KdaggerK_max_eigenvalue": 0.8148148148148152,
+      "success_observed": 0.5925925925925928,
+      "success_formula": 0.5925925925925926,
+      "highest_harmonic_weight_observed": 0.30000000000000004,
+      "highest_harmonic_weight_formula": 0.3,
+      "contraction_spectrum_prediction": [
+        {
+          "harmonic_degree": 2,
+          "eigenvalue": 0,
+          "multiplicity": 27
+        },
+        {
+          "harmonic_degree": 1,
+          "eigenvalue": 5,
+          "multiplicity": 8
+        },
+        {
+          "harmonic_degree": 0,
+          "eigenvalue": 8,
+          "multiplicity": 1
+        }
+      ],
+      "projected_contraction_nonzero_eigenvalue": 5,
+      "projected_contraction_rank": 8,
+      "errors": {
+        "cp_upper_violation": 0.0,
+        "cp_lower_violation": 0.0,
+        "exact_factorization": 2.051837409448999e-16,
+        "success_probability": 2.220446049250313e-16,
+        "highest_harmonic_weight": 5.551115123125783e-17,
+        "extraction_isometry": 4.440892098500626e-16,
+        "residual_projector_idempotence": 1.6653345369377346e-16,
+        "contraction_spectrum": 4.440892098500626e-15,
+        "projected_contraction_spectrum": 2.6645352591003757e-15,
+        "contraction_commutator": 1.7763568394002505e-15
+      },
+      "passed": true
+    },
+    {
+      "d": 3,
+      "N": 3,
+      "input_dimension": 100,
+      "alpha_squared": 1.125,
+      "KdaggerK_min_eigenvalue": -1.0331830288841843e-16,
+      "KdaggerK_max_eigenvalue": 0.6500000000000011,
+      "success_observed": 0.33749999999999974,
+      "success_formula": 0.33749999999999997,
+      "highest_harmonic_weight_observed": 0.11428571428571417,
+      "highest_harmonic_weight_formula": 0.11428571428571428,
+      "contraction_spectrum_prediction": [
+        {
+          "harmonic_degree": 3,
+          "eigenvalue": 0,
+          "multiplicity": 64
+        },
+        {
+          "harmonic_degree": 2,
+          "eigenvalue": 7,
+          "multiplicity": 27
+        },
+        {
+          "harmonic_degree": 1,
+          "eigenvalue": 12,
+          "multiplicity": 8
+        },
+        {
+          "harmonic_degree": 0,
+          "eigenvalue": 15,
+          "multiplicity": 1
+        }
+      ],
+      "projected_contraction_nonzero_eigenvalue": 7,
+      "projected_contraction_rank": 27,
+      "errors": {
+        "cp_upper_violation": 0.0,
+        "cp_lower_violation": 1.0331830288841843e-16,
+        "exact_factorization": 1.6712310313754664e-16,
+        "success_probability": 2.220446049250313e-16,
+        "highest_harmonic_weight": 1.1102230246251565e-16,
+        "extraction_isometry": 4.440892098500626e-16,
+        "residual_projector_idempotence": 2.0787960673295922e-16,
+        "contraction_spectrum": 8.881784197001252e-15,
+        "projected_contraction_spectrum": 6.217248937900877e-15,
+        "contraction_commutator": 3.552713678800501e-15
+      },
+      "passed": true
+    },
+    {
+      "d": 3,
+      "N": 4,
+      "input_dimension": 225,
+      "alpha_squared": 1.28,
+      "KdaggerK_min_eigenvalue": -5.551115123125783e-16,
+      "KdaggerK_max_eigenvalue": 0.6400000000000017,
+      "success_observed": 0.14628571428571419,
+      "success_formula": 0.1462857142857143,
+      "highest_harmonic_weight_observed": 0.03968253968253965,
+      "highest_harmonic_weight_formula": 0.03968253968253968,
+      "contraction_spectrum_prediction": [
+        {
+          "harmonic_degree": 4,
+          "eigenvalue": 0,
+          "multiplicity": 125
+        },
+        {
+          "harmonic_degree": 3,
+          "eigenvalue": 9,
+          "multiplicity": 64
+        },
+        {
+          "harmonic_degree": 2,
+          "eigenvalue": 16,
+          "multiplicity": 27
+        },
+        {
+          "harmonic_degree": 1,
+          "eigenvalue": 21,
+          "multiplicity": 8
+        },
+        {
+          "harmonic_degree": 0,
+          "eigenvalue": 24,
+          "multiplicity": 1
+        }
+      ],
+      "projected_contraction_nonzero_eigenvalue": 9,
+      "projected_contraction_rank": 64,
+      "errors": {
+        "cp_upper_violation": 0.0,
+        "cp_lower_violation": 5.551115123125783e-16,
+        "exact_factorization": 2.1834015075929293e-16,
+        "success_probability": 1.1102230246251565e-16,
+        "highest_harmonic_weight": 2.7755575615628914e-17,
+        "extraction_isometry": 4.440892098500626e-16,
+        "residual_projector_idempotence": 3.191712100822351e-16,
+        "contraction_spectrum": 3.552713678800501e-14,
+        "projected_contraction_spectrum": 1.2434497875801753e-14,
+        "contraction_commutator": 5.329070518200751e-15
+      },
+      "passed": true
+    },
+    {
+      "d": 4,
+      "N": 1,
+      "input_dimension": 16,
+      "alpha_squared": 0.4,
+      "KdaggerK_min_eigenvalue": 0.19999999999999987,
+      "KdaggerK_max_eigenvalue": 0.9999999999999998,
+      "success_observed": 0.39999999999999986,
+      "success_formula": 0.4,
+      "highest_harmonic_weight_observed": 0.7499999999999998,
+      "highest_harmonic_weight_formula": 0.75,
+      "contraction_spectrum_prediction": [
+        {
+          "harmonic_degree": 1,
+          "eigenvalue": 0,
+          "multiplicity": 15
+        },
+        {
+          "harmonic_degree": 0,
+          "eigenvalue": 4,
+          "multiplicity": 1
+        }
+      ],
+      "projected_contraction_nonzero_eigenvalue": 4,
+      "projected_contraction_rank": 1,
+      "errors": {
+        "cp_upper_violation": 0.0,
+        "cp_lower_violation": 0.0,
+        "exact_factorization": 5.79441486300118e-17,
+        "success_probability": 1.6653345369377348e-16,
+        "highest_harmonic_weight": 2.220446049250313e-16,
+        "extraction_isometry": 0.0,
+        "residual_projector_idempotence": 0.0,
+        "contraction_spectrum": 5.96874343352447e-16,
+        "projected_contraction_spectrum": 5.96874343352447e-16,
+        "contraction_commutator": 0.0
+      },
+      "passed": true
+    },
+    {
+      "d": 4,
+      "N": 2,
+      "input_dimension": 100,
+      "alpha_squared": 0.8,
+      "KdaggerK_min_eigenvalue": 0.14999999999999994,
+      "KdaggerK_max_eigenvalue": 0.8500000000000006,
+      "success_observed": 0.5999999999999999,
+      "success_formula": 0.6000000000000001,
+      "highest_harmonic_weight_observed": 0.39999999999999986,
+      "highest_harmonic_weight_formula": 0.39999999999999997,
+      "contraction_spectrum_prediction": [
+        {
+          "harmonic_degree": 2,
+          "eigenvalue": 0,
+          "multiplicity": 84
+        },
+        {
+          "harmonic_degree": 1,
+          "eigenvalue": 6,
+          "multiplicity": 15
+        },
+        {
+          "harmonic_degree": 0,
+          "eigenvalue": 10,
+          "multiplicity": 1
+        }
+      ],
+      "projected_contraction_nonzero_eigenvalue": 6,
+      "projected_contraction_rank": 15,
+      "errors": {
+        "cp_upper_violation": 0.0,
+        "cp_lower_violation": 0.0,
+        "exact_factorization": 2.151386217589774e-16,
+        "success_probability": 2.220446049250313e-16,
+        "highest_harmonic_weight": 1.1102230246251565e-16,
+        "extraction_isometry": 4.440892098500626e-16,
+        "residual_projector_idempotence": 0.0,
+        "contraction_spectrum": 5.329070518200751e-15,
+        "projected_contraction_spectrum": 4.440892098500626e-15,
+        "contraction_commutator": 1.7763568394002505e-15
+      },
+      "passed": true
+    },
+    {
+      "d": 4,
+      "N": 3,
+      "input_dimension": 400,
+      "alpha_squared": 1.0588235294117647,
+      "KdaggerK_min_eigenvalue": -1.1623748433736448e-16,
+      "KdaggerK_max_eigenvalue": 0.686274509803923,
+      "success_observed": 0.42352941176470604,
+      "success_formula": 0.4235294117647059,
+      "highest_harmonic_weight_observed": 0.1785714285714287,
+      "highest_harmonic_weight_formula": 0.17857142857142855,
+      "contraction_spectrum_prediction": [
+        {
+          "harmonic_degree": 3,
+          "eigenvalue": 0,
+          "multiplicity": 300
+        },
+        {
+          "harmonic_degree": 2,
+          "eigenvalue": 8,
+          "multiplicity": 84
+        },
+        {
+          "harmonic_degree": 1,
+          "eigenvalue": 14,
+          "multiplicity": 15
+        },
+        {
+          "harmonic_degree": 0,
+          "eigenvalue": 18,
+          "multiplicity": 1
+        }
+      ],
+      "projected_contraction_nonzero_eigenvalue": 8,
+      "projected_contraction_rank": 84,
+      "errors": {
+        "cp_upper_violation": 0.0,
+        "cp_lower_violation": 1.1623748433736448e-16,
+        "exact_factorization": 1.7286073392437492e-16,
+        "success_probability": 1.6653345369377348e-16,
+        "highest_harmonic_weight": 1.3877787807814457e-16,
+        "extraction_isometry": 4.440892098500626e-16,
+        "residual_projector_idempotence": 2.427768093235174e-16,
+        "contraction_spectrum": 1.4210854715202004e-14,
+        "projected_contraction_spectrum": 1.0658141036401503e-14,
+        "contraction_commutator": 3.552713678800501e-15
+      },
+      "passed": true
+    },
+    {
+      "d": 5,
+      "N": 2,
+      "input_dimension": 225,
+      "alpha_squared": 0.7272727272727273,
+      "KdaggerK_min_eigenvalue": 0.14545454545454561,
+      "KdaggerK_max_eigenvalue": 0.8727272727272735,
+      "success_observed": 0.581818181818182,
+      "success_formula": 0.5818181818181819,
+      "highest_harmonic_weight_observed": 0.47619047619047616,
+      "highest_harmonic_weight_formula": 0.47619047619047616,
+      "contraction_spectrum_prediction": [
+        {
+          "harmonic_degree": 2,
+          "eigenvalue": 0,
+          "multiplicity": 200
+        },
+        {
+          "harmonic_degree": 1,
+          "eigenvalue": 7,
+          "multiplicity": 24
+        },
+        {
+          "harmonic_degree": 0,
+          "eigenvalue": 12,
+          "multiplicity": 1
+        }
+      ],
+      "projected_contraction_nonzero_eigenvalue": 7,
+      "projected_contraction_rank": 24,
+      "errors": {
+        "cp_upper_violation": 0.0,
+        "cp_lower_violation": 0.0,
+        "exact_factorization": 2.3928361139726545e-16,
+        "success_probability": 1.1102230246251565e-16,
+        "highest_harmonic_weight": 0.0,
+        "extraction_isometry": 4.440892098500626e-16,
+        "residual_projector_idempotence": 2.510848048589441e-16,
+        "contraction_spectrum": 3.552713678800501e-15,
+        "projected_contraction_spectrum": 4.440892098500626e-15,
+        "contraction_commutator": 1.7763568394002505e-15
+      },
+      "passed": true
+    },
+    {
+      "d": 6,
+      "N": 2,
+      "input_dimension": 441,
+      "alpha_squared": 0.6666666666666666,
+      "KdaggerK_min_eigenvalue": 0.13888888888888873,
+      "KdaggerK_max_eigenvalue": 0.8888888888888895,
+      "success_observed": 0.5555555555555557,
+      "success_formula": 0.5555555555555556,
+      "highest_harmonic_weight_observed": 0.5357142857142858,
+      "highest_harmonic_weight_formula": 0.5357142857142857,
+      "contraction_spectrum_prediction": [
+        {
+          "harmonic_degree": 2,
+          "eigenvalue": 0,
+          "multiplicity": 405
+        },
+        {
+          "harmonic_degree": 1,
+          "eigenvalue": 8,
+          "multiplicity": 35
+        },
+        {
+          "harmonic_degree": 0,
+          "eigenvalue": 14,
+          "multiplicity": 1
+        }
+      ],
+      "projected_contraction_nonzero_eigenvalue": 8,
+      "projected_contraction_rank": 35,
+      "errors": {
+        "cp_upper_violation": 0.0,
+        "cp_lower_violation": 0.0,
+        "exact_factorization": 1.4932356834020747e-16,
+        "success_probability": 1.1102230246251565e-16,
+        "highest_harmonic_weight": 1.1102230246251565e-16,
+        "extraction_isometry": 4.440892098500626e-16,
+        "residual_projector_idempotence": 1.7289516828707758e-16,
+        "contraction_spectrum": 7.105427357601002e-15,
+        "projected_contraction_spectrum": 5.329070518200751e-15,
+        "contraction_commutator": 1.7763568394002505e-15
+      },
+      "passed": true
+    }
+  ],
+  "matched_purifier_cases": [
+    {
+      "system_dimension": 6,
+      "environment_dimension": 2,
+      "nonzero_eigenvalues": [
+        0.5,
+        0.5
+      ],
+      "flat_spectrum": true,
+      "purity": 0.5,
+      "matched_success_observed": 0.24999999999999994,
+      "matched_success_formula": 0.25,
+      "matched_canonical_fidelity": 1.0000000000000002,
+      "matched_canonical_fidelity_formula": 1.0000000000000002,
+      "independent_random_gauge_success": 0.25,
+      "independent_random_gauge_canonical_fidelity": 0.1388304906815799,
+      "swapped_gauge_canonical_fidelity": 2.3298965872307432e-32,
+      "independent_haar_average_success": 0.24999999999999997,
+      "independent_haar_average_canonical_fidelity": 0.25000000000000006,
+      "errors": {
+        "purification_marginal": 2.213887308987093e-16,
+        "matched_bell_vector": 2.0238768050258892e-16,
+        "matched_success_purity_over_k": 5.551115123125783e-17,
+        "canonical_fidelity_formula": 0.0,
+        "independent_gauge_marginal": 1.1227718609633762e-16,
+        "swapped_gauge_marginal": 2.759139780744721e-16,
+        "swapped_gauge_orthogonality": 2.3298965872307432e-32,
+        "swapped_gauge_success": 0.0,
+        "independent_haar_success": 2.7755575615628914e-17,
+        "independent_haar_conditioned_state": 1.5198279096407067e-17,
+        "independent_haar_canonical_fidelity": 5.551115123125783e-17
+      },
+      "passed": true
+    },
+    {
+      "system_dimension": 6,
+      "environment_dimension": 2,
+      "nonzero_eigenvalues": [
+        0.8,
+        0.2
+      ],
+      "flat_spectrum": false,
+      "purity": 0.6800000000000002,
+      "matched_success_observed": 0.3399999999999997,
+      "matched_success_formula": 0.3400000000000001,
+      "matched_canonical_fidelity": 0.9529411764705882,
+      "matched_canonical_fidelity_formula": 0.9529411764705881,
+      "independent_random_gauge_success": 0.2054440577043134,
+      "independent_random_gauge_canonical_fidelity": 0.2980729551926074,
+      "swapped_gauge_canonical_fidelity": 1.3379929320780886e-31,
+      "independent_haar_average_success": 0.24999999999999997,
+      "independent_haar_average_canonical_fidelity": 0.52,
+      "errors": {
+        "purification_marginal": 3.8106207807692474e-16,
+        "matched_bell_vector": 2.5777795652833443e-16,
+        "matched_success_purity_over_k": 3.885780586188048e-16,
+        "canonical_fidelity_formula": 1.1102230246251565e-16,
+        "independent_gauge_marginal": 2.3233186315320565e-16,
+        "swapped_gauge_marginal": 4.749192088758429e-16,
+        "swapped_gauge_orthogonality": 1.3379929320780886e-31,
+        "swapped_gauge_success": 2.220446049250313e-16,
+        "independent_haar_success": 2.7755575615628914e-17,
+        "independent_haar_conditioned_state": 1.1102230246251565e-16,
+        "independent_haar_canonical_fidelity": 1.1102230246251565e-16
+      },
+      "passed": true
+    },
+    {
+      "system_dimension": 6,
+      "environment_dimension": 4,
+      "nonzero_eigenvalues": [
+        0.5,
+        0.5
+      ],
+      "flat_spectrum": true,
+      "purity": 0.5,
+      "matched_success_observed": 0.12499999999999997,
+      "matched_success_formula": 0.125,
+      "matched_canonical_fidelity": 1.0,
+      "matched_canonical_fidelity_formula": 1.0000000000000002,
+      "independent_random_gauge_success": 0.06850909063256781,
+      "independent_random_gauge_canonical_fidelity": 0.12964581889370785,
+      "swapped_gauge_canonical_fidelity": 9.026738150059642e-33,
+      "independent_haar_average_success": 0.0625,
+      "independent_haar_average_canonical_fidelity": 0.25000000000000006,
+      "errors": {
+        "purification_marginal": 3.307447284236619e-16,
+        "matched_bell_vector": 1.543040981548015e-16,
+        "matched_success_purity_over_k": 2.7755575615628914e-17,
+        "canonical_fidelity_formula": 2.220446049250313e-16,
+        "independent_gauge_marginal": 2.6618409798724124e-16,
+        "swapped_gauge_marginal": 2.909371516594496e-16,
+        "swapped_gauge_orthogonality": 9.026738150059642e-33,
+        "swapped_gauge_success": 1.3877787807814457e-17,
+        "independent_haar_success": 0.0,
+        "independent_haar_conditioned_state": 8.889983284514619e-18,
+        "independent_haar_canonical_fidelity": 5.551115123125783e-17
+      },
+      "passed": true
+    },
+    {
+      "system_dimension": 6,
+      "environment_dimension": 4,
+      "nonzero_eigenvalues": [
+        0.8,
+        0.2
+      ],
+      "flat_spectrum": false,
+      "purity": 0.6800000000000002,
+      "matched_success_observed": 0.17000000000000004,
+      "matched_success_formula": 0.17000000000000004,
+      "matched_canonical_fidelity": 0.9529411764705877,
+      "matched_canonical_fidelity_formula": 0.9529411764705881,
+      "independent_random_gauge_success": 0.0341023046078968,
+      "independent_random_gauge_canonical_fidelity": 0.4486399604310565,
+      "swapped_gauge_canonical_fidelity": 2.636770325504759e-32,
+      "independent_haar_average_success": 0.0625,
+      "independent_haar_average_canonical_fidelity": 0.5200000000000001,
+      "errors": {
+        "purification_marginal": 1.459559368568545e-16,
+        "matched_bell_vector": 9.656039601630914e-17,
+        "matched_success_purity_over_k": 0.0,
+        "canonical_fidelity_formula": 3.3306690738754696e-16,
+        "independent_gauge_marginal": 6.398865075132398e-17,
+        "swapped_gauge_marginal": 4.454310201214354e-16,
+        "swapped_gauge_orthogonality": 2.636770325504759e-32,
+        "swapped_gauge_success": 4.163336342344337e-17,
+        "independent_haar_success": 0.0,
+        "independent_haar_conditioned_state": 1.1763948445653984e-18,
+        "independent_haar_canonical_fidelity": 0.0
+      },
+      "passed": true
+    }
+  ]
+}
