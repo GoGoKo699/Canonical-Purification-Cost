@@ -267,7 +267,7 @@ $$
 \tag{C17}
 $$
 
-The second line is the vector-valued multiplication lemma (H38). Most of the product of a highest-degree amplitude with $\chi(\psi)$ lies in degree $N+1$; that component is orthogonal to every possible signal amplitude of an $N$-pair processor.
+The second line is the vector-valued multiplication lemma (H38). The degree-$N+1$ component of the product of a highest-degree amplitude with $\chi(\psi)$ is orthogonal to every possible signal amplitude of an $N$-pair processor. The retained fraction is $\lambda_N$, which tends to zero in the regime $N=o(\sqrt d)$.
 
 Combining (C15)–(C17) and using $\sqrt{AB}\leq(A+B)/2\leq p/2$ and $B\leq p$ proves
 
