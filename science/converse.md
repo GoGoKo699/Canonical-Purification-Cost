@@ -19,24 +19,30 @@ H=\mathbb C|\mathrm{vac}\rangle\oplus V,
 
 where $`\psi`$ is an unknown unit vector in $`V`$. The target is
 
+**Equation (C1).**
+
 ```math
 |T_\psi\rangle
 =\frac{|\mathrm{vac},\mathrm{vac}\rangle+|\psi\rangle\otimes|\psi^*\rangle}{\sqrt2}.
-\tag{C1}
+
 ```
 
 All complex conjugates refer to the supplied basis. The second signal factor may equivalently be identified with the conjugate Hilbert space $`\overline V`$.
 
 Begin with the balanced pure input
 
+**Equation (C2).**
+
 ```math
 v_N(\psi)=\psi^{\otimes N}\otimes(\psi^*)^{\otimes N}
 \in\mathcal R_N
 =\mathrm{Sym}^N(V)\otimes\mathrm{Sym}^N(\overline V).
-\tag{C2}
+
 ```
 
 Let $`\Lambda`$ be the successful branch of a processor, a completely positive trace-nonincreasing map to the target output space $`O=H\otimes H`$. No symmetry is imposed on $`\Lambda`$. Define the unnormalized accepted output, its probability, and its target overlap by
+
+**Equation (C3).**
 
 ```math
 \sigma_\psi
@@ -45,7 +51,7 @@ Let $`\Lambda`$ be the successful branch of a processor, a completely positive t
 q(\psi)=\mathrm{Tr}\sigma_\psi,
 \qquad
 g(\psi)=\langle T_\psi|\sigma_\psi|T_\psi\rangle.
-\tag{C3}
+
 ```
 
 For $`q(\psi)>0`$, the conditional squared fidelity is
@@ -56,11 +62,13 @@ F(\psi)=\frac{g(\psi)}{q(\psi)}.
 
 When the target is pure, squared fidelity is exactly this overlap with the normalized output. Haar-average quantities are
 
+**Equation (C4).**
+
 ```math
 p=\int q(\psi)\,d\mu(\psi),
 \qquad
 f=\int g(\psi)\,d\mu(\psi).
-\tag{C4}
+
 ```
 
 For $`p>0`$, $`f/p`$ is the conditional fidelity averaged over successful runs. The posterior distribution of $`\psi`$ in this average is proportional to $`q(\psi)d\mu(\psi)`$. It is generally different from the unweighted average of $`F(\psi)`$.
@@ -68,6 +76,8 @@ For $`p>0`$, $`f/p`$ is the conditional fidelity averaged over successful runs. 
 ## 2. Finite-copy theorem
 
 Set
+
+**Equation (C5).**
 
 ```math
 p_N
@@ -78,12 +88,14 @@ p_N
 \qquad
 \lambda_N
 =1-\frac{(N+d-1)^2}{(2N+d-1)(2N+d)}.
-\tag{C5}
+
 ```
 
 The conventions for $`N=0`$ are $`p_0=1`$, $`\delta_0=0`$, and $`\lambda_0=1/d`$.
 
 **Theorem 1.** Every successful completely positive trace-nonincreasing processor acting on (C2) satisfies
+
+**Equation (C6).**
 
 ```math
 \boxed{
@@ -91,7 +103,7 @@ f\leq
 \left(\frac12+\frac{\sqrt{\lambda_N}}2\right)p
 +\sqrt{\delta_Np}.
 }
-\tag{C6}
+
 ```
 
 In particular, if $`p>0`$ and $`f/p\geq F_0`$ with
@@ -102,23 +114,27 @@ F_0>\frac12+\frac{\sqrt{\lambda_N}}2,
 
 then
 
+**Equation (C7).**
+
 ```math
 \boxed{
 p\leq
 \frac{\delta_N}
 {\left(F_0-\frac12-\frac{\sqrt{\lambda_N}}2\right)^2}.
 }
-\tag{C7}
+
 ```
 
 For a trace-preserving processor, $`p=1`$, and hence its Haar-average squared fidelity obeys
+
+**Equation (C8).**
 
 ```math
 \boxed{
 \overline F
 \leq\frac12+\frac{\sqrt{\lambda_N}}2+\sqrt{\delta_N}.
 }
-\tag{C8}
+
 ```
 
 Each right-hand side may of course be capped by the trivial probability or fidelity bound of one. Equation (C6) is useful without an exact-output promise and without a covariance restriction.
@@ -137,11 +153,13 @@ $`\sum_aK_a^\dagger K_a\leq I`$. Thus the operator
 
 satisfies
 
+**Equation (C9).**
+
 ```math
 \mathsf V^\dagger\mathsf V\leq I,
 \qquad
 \Lambda(X)=\mathrm{Tr}_E[\mathsf V X\mathsf V^\dagger].
-\tag{C9}
+
 ```
 
 This is the contraction form of a Stinespring representation. The finite-dimensional Kraus and Stinespring characterizations are stated in [Watrous, §2.2.2, Theorem 2.22][Watrous]. The inequality in (C9) also follows directly from the displayed Kraus construction.
@@ -150,11 +168,13 @@ All ancillas and discarded systems can be included in $`E`$. If a protocol uses 
 
 Decompose the output vector according to its overlap with the two target sectors:
 
+**Equation (C10).**
+
 ```math
 \mathsf Vv_N(\psi)
 =|\mathrm{vac},\mathrm{vac}\rangle\otimes a(\psi)
 +b(\psi)+r(\psi),
-\tag{C10}
+
 ```
 
 where
@@ -174,9 +194,11 @@ B=\|b\|_2^2.
 
 Then
 
+**Equation (C11).**
+
 ```math
 A+B\leq p.
-\tag{C11}
+
 ```
 
 The environment-valued amplitudes $`a`$ and $`b_{ij}`$ all belong to $`\mathcal L_N\otimes E`$. They are obtained by applying fixed linear functionals or linear maps to $`v_N(\psi)`$. The final section of [harmonic_analysis.md](harmonic_analysis.md#7-vector-valued-amplitudes-and-arbitrary-linear-processors) proves this statement, including the complex-conjugation convention, for an arbitrary linear map.
@@ -191,27 +213,31 @@ Let $`P_N`$ be the top traceless tensor projector, and let
 
 It is a contraction because it is the composition of a projection with the contraction $`\mathsf V`$. The harmonic decomposition of $`a`$ is
 
+**Equation (C12).**
+
 ```math
-a=a_{<N}+a_N,
+a=a_{\lt N}+a_N,
 \qquad
-a_{<N}(\psi)=\mathsf A(I-P_N)v_N(\psi),
+a_{\lt N}(\psi)=\mathsf A(I-P_N)v_N(\psi),
 \qquad
 a_N(\psi)=\mathsf A P_Nv_N(\psi).
-\tag{C12}
+
 ```
 
-Here $`a_N\in\mathcal H_N\otimes E`$, $`a_{<N}\in\mathcal L_{N-1}\otimes E`$, and these functions are $`L^2`$-orthogonal. For $`N=0`$, interpret $`a_{<0}=0`$.
+Here $`a_N\in\mathcal H_N\otimes E`$, $`a_{\lt N}\in\mathcal L_{N-1}\otimes E`$, and these functions are $`L^2`$-orthogonal. For $`N=0`$, interpret $`a_{\lt 0}=0`$.
 
 The total lower-degree input weight is exactly $`\delta_N`$. Applying the contraction $`\mathsf A`$ cannot increase its average squared norm, so
 
+**Equation (C13).**
+
 ```math
 \begin{aligned}
-\|a_{<N}\|_2^2
+\|a_{\lt N}\|_2^2
 &=\int\|\mathsf A(I-P_N)v_N(\psi)\|^2\,d\mu(\psi)\\
 &\leq\int\|(I-P_N)v_N(\psi)\|^2\,d\mu(\psi)
 =\delta_N.
 \end{aligned}
-\tag{C13}
+
 ```
 
 Orthogonality in (C12) also gives $`\|a_N\|_2^2\leq A`$. Identifying (C12) as the actual harmonic decomposition is essential: it follows from the explicit tensor-to-function identification, not from assuming that the processor respects the group action.
@@ -220,11 +246,13 @@ Orthogonality in (C12) also gives $`\|a_N\|_2^2\leq A`$. Identifying (C12) as th
 
 Use the isometry
 
+**Equation (C14).**
+
 ```math
 (Ma)(\psi)=\chi(\psi)\otimes a(\psi),
 \qquad
 \chi(\psi)=\psi\otimes\psi^*.
-\tag{C14}
+
 ```
 
 Its pointwise adjoint on $`b`$ is
@@ -236,6 +264,8 @@ Its pointwise adjoint on $`b`$ is
 
 In particular, $`\|M^\dagger b\|_2\leq\|b\|_2`$. By (C1) and (C10), the exact unnormalized fidelity is
 
+**Equation (C15).**
+
 ```math
 \begin{aligned}
 f
@@ -244,20 +274,24 @@ f
 +\mathrm{Re}\langle Ma,b\rangle_2\\
 &\leq\frac p2+|\langle Ma,b\rangle_2|.
 \end{aligned}
-\tag{C15}
+
 ```
 
 Thus any improvement above the $`1/2`$ overlap of the vacuum output requires coherent overlap between the vacuum and signal amplitudes.
 
 For the lower-degree part, the isometry property and Cauchy–Schwarz give
 
+**Equation (C16).**
+
 ```math
-|\langle Ma_{<N},b\rangle_2|
+|\langle Ma_{\lt N},b\rangle_2|
 \leq\sqrt{\delta_N}\sqrt B.
-\tag{C16}
+
 ```
 
 For the highest-degree part, $`b`$ has no harmonic component above degree $`N`$. Consequently,
+
+**Equation (C17).**
 
 ```math
 \begin{aligned}
@@ -266,7 +300,7 @@ For the highest-degree part, $`b`$ has no harmonic component above degree $`N`$.
 &\leq\sqrt{\lambda_N}\,\|a_N\|_2\sqrt B\\
 &\leq\sqrt{\lambda_N}\sqrt{AB}.
 \end{aligned}
-\tag{C17}
+
 ```
 
 The second line is the vector-valued multiplication lemma (H38). The degree-$`N+1`$ component of the product of a highest-degree amplitude with $`\chi(\psi)`$ is orthogonal to every possible signal amplitude of an $`N`$-pair processor. The retained fraction is $`\lambda_N`$, which tends to zero in the regime $`N=o(\sqrt d)`$.
@@ -287,11 +321,13 @@ The theorem applies to a protocol with a hard budget of $`T`$ total copies, wher
 
 To simulate such a protocol, give the simulator $`T`$ pure copies of $`\psi`$ and $`T`$ pure copies of $`\psi^*`$. On each source register apply the known channel
 
+**Equation (C18).**
+
 ```math
 \mathcal D(X)
 =\frac12\iota X\iota^\dagger
 +\frac12\mathrm{Tr}(X)|\mathrm{vac}\rangle\langle\mathrm{vac}|,
-\tag{C18}
+
 ```
 
 where $`\iota:V\hookrightarrow H`$ is the fixed inclusion. This produces $`T`$ independent copies of each mixed source. In every branch the original protocol uses at most $`T`$ copies of either type, so the simulator has enough of both.
@@ -310,28 +346,34 @@ Fix constants $`p_{\min}>0`$ and $`F_0>1/2`$. Suppose a protocol has average suc
 
 For a hard total mixed-copy budget $`T`$, a useful necessary finite-dimensional condition is
 
+**Equation (C19).**
+
 ```math
 F_0-\frac12
 \leq\frac{\sqrt{\lambda_T}}2
 +\sqrt{\frac{\delta_T}{p_{\min}}}.
-\tag{C19}
+
 ```
 
 The exact constants are specified in (C5). In particular,
+
+**Equation (C20).**
 
 ```math
 \delta_T\leq\frac{T^2}{d-1+T},
 \qquad
 \lambda_T
 =\frac{(2T+1)d+3T^2-1}{(d+2T-1)(d+2T)}.
-\tag{C20}
+
 ```
 
 If $`T=o(\sqrt d)`$, both correction terms in (C19) vanish. More quantitatively, for $`T\leq c\sqrt d`$, the second term is at most $`c/\sqrt{p_{\min}}+o(1)`$, while the first term tends to zero. Choosing $`c`$ below a fixed multiple of $`(F_0-1/2)\sqrt{p_{\min}}`$ makes (C19) impossible for sufficiently large $`d`$. Hence
 
+**Equation (C21).**
+
 ```math
 T=\Omega_{p_{\min},F_0}(\sqrt d).
-\tag{C21}
+
 ```
 
 The same conclusion holds for an unconditional channel with Haar-average fidelity at least a fixed $`F_0>1/2`$, by taking $`p_{\min}=1`$.

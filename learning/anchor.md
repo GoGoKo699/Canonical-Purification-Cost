@@ -218,8 +218,7 @@ The textbook supplies the language for states, physical maps, error and symmetry
    ```math
    Q_d^*(A,B)=\mathbb E[q_d^*(K,L)],
    \quad K\sim\mathrm{Bin}(A,1/2),\quad L\sim\mathrm{Bin}(B,1/2),
-
-```
+   ```
    with independent counts. This identity includes all requests, zero-signal events and rejected filters. Bounded repetition charges new hard caps instead of an unbounded expected waiting time.
 
 ### Robust total-copy cost and the access comparison

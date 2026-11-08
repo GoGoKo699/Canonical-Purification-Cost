@@ -26,6 +26,8 @@ Let $`q_d^*(k,\ell)`$ be the [pure-copy optimum](exact_frontier.md), including i
 
 **Theorem.** For all $`d\ge2`$ and nonnegative integers $`A,B`$,
 
+**Equation (M1).**
+
 ```math
 \boxed{
 Q_d^*(A,B)=
@@ -33,7 +35,7 @@ Q_d^*(A,B)=
 \sum_{k=0}^{A}\sum_{\ell=0}^{B}
 \binom Ak\binom B\ell\,q_d^*(k,\ell).
 }
-\tag{M1}
+
 ```
 
 Equivalently $`Q_d^*(A,B)=\mathbb E[q_d^*(K,L)]`$, where $`K\sim\mathrm{Bin}(A,1/2)`$ and $`L\sim\mathrm{Bin}(B,1/2)`$ are independent.
@@ -63,14 +65,18 @@ The argument also works for known, unequal signal probabilities by replacing the
 
 The pure zero-budget boundary gives
 
+**Equation (M2).**
+
 ```math
 Q_d^*(A,0)=Q_d^*(0,B)=0,
 \qquad
 Q_d^*(A,B)\le(1-2^{-A})(1-2^{-B}).
-\tag{M2}
+
 ```
 
 In particular, one conjugate mixed specimen imposes success at most $`1/2`$, however large the ordinary supply. Using the sharp pure n-by-one optimum,
+
+**Equation (M3).**
 
 ```math
 \boxed{
@@ -78,7 +84,7 @@ Q_d^*(A,1)=
 2^{-A}\sum_{k=0}^{A}\binom Ak
 \frac{k}{d+2k-1}.
 }
-\tag{M3}
+
 ```
 
 The $`k=0`$ term is zero. For $`A/d\to c>0`$ as $`d\to\infty`$, binomial concentration and bounded convergence imply
@@ -101,9 +107,11 @@ Together with (M2), it proves $`Q_d^*(A,B)\to1-2^{-B}`$ when $`B`$ is fixed and 
 
 For a simple explicit protocol, choose a pure filter with uniform exact success $`q`$ on $`(n,m)`$ signals. Request exactly $`A`$ and $`B`$ mixed specimens. Fail if either observed signal count is insufficient; otherwise retain known $`n,m`$ signal positions and apply the filter. Its exact success is
 
+**Equation (M4).**
+
 ```math
 u=q\,\Pr[K\ge n]\,\Pr[L\ge m].
-\tag{M4}
+
 ```
 
 | Resource | One attempt | At most $`R`$ independent attempts |

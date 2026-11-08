@@ -272,7 +272,7 @@ N=\lceil\sqrt d\rceil,
 \qquad m=N-1.
 ```
 
-Since $`d\ge2`$, we have $`N\ge2`$. Also $`m^2<d`$, and the quantities are integers, so $`m^2\le d-1`$. The product formula gives
+Since $`d\ge2`$, we have $`N\ge2`$. Also $`m^2\lt d`$, and the quantities are integers, so $`m^2\le d-1`$. The product formula gives
 
 ```math
 \begin{aligned}

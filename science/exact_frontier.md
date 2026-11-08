@@ -153,10 +153,12 @@ The coherent orbit spans $`R_{n,m}`$: a linear functional vanishing on that orbi
 
 The $`\sqrt2`$ factor from the vacuum target amplitude is absorbed into $`L`$. With $`X=L^\dagger L`$, exact physical success maps are precisely the positive residual operators satisfying
 
+**Equation (E1).**
+
 ```math
 X\ge0,\qquad
 W_{n,m}^\dagger(I_{\rm out}\otimes X)W_{n,m}\le I.
-\tag{E1}
+
 ```
 
 Their success is
@@ -198,11 +200,13 @@ By exchanging the two supplied pools, assume $`n\ge m\ge1`$. Set $`r=n-m`$ and $
 
 These are the unequal-degree complex harmonics. Their dimensions are
 
+**Equation (E2).**
+
 ```math
 h_j=
 \binom{d+r+j-1}{r+j}\binom{d+j-1}{j}
 -\binom{d+r+j-2}{r+j-1}\binom{d+j-2}{j-1},
-\tag{E2}
+
 ```
 
 with the second term defined as zero at $`j=0`$. Fischer decomposition follows from the contraction/insertion commutator as in the [balanced harmonic account](harmonic_analysis.md).
@@ -211,28 +215,34 @@ For completeness, irreducibility and multiplicity one can be checked from the cy
 
 Put $`s=\langle\psi|\phi\rangle`$ and $`t=|s|^2`$. The unit-diagonal positive-definite sector kernels are
 
+**Equation (E3).**
+
 ```math
 Z_j(\psi,\phi)=s^rQ_j(t),
 \qquad
 Q_j(t)=\frac{P_j^{(d-2,r)}(2t-1)}{P_j^{(d-2,r)}(1)}.
-\tag{E3}
+
 ```
 
 Here $`P_j^{(\alpha,\beta)}`$ is the Jacobi polynomial. The factor $`s^r`$ retains the input's unequal global-phase charge. Reversing the kernel convention conjugates all kernels without changing the coefficients or optimum. The radial Haar measure and Jacobi norm give
 
+**Equation (E4).**
+
 ```math
 (d-1)\int_0^1t^r(1-t)^{d-2}Q_j(t)Q_\ell(t)\,dt
 =\frac{\delta_{j\ell}}{h_j}.
-\tag{E4}
+
 ```
 
 The input Gram kernel is $`s^rt^k`$. Expand
+
+**Equation (E5).**
 
 ```math
 t^k=\sum_{j=0}^kp_jQ_j(t),
 \qquad
 p_j=h_j\frac{\Gamma(d)n!m!}{(m-j)!\,\Gamma(d+n+j)}.
-\tag{E5}
+
 ```
 
 Every $`p_j`$ is positive and $`\sum_jp_j=1`$. To derive the normalization explicitly, shifted Rodrigues gives
@@ -259,13 +269,15 @@ Insert this into (E4), integrate by parts $`j`$ times and use the beta integral.
 
 In particular, the highest traceless input weight is
 
+**Equation (E6).**
+
 ```math
 p_{\rm top}=p_k
 =\frac{\Gamma(d+n-1)\Gamma(d+m-1)}
 {\Gamma(d-1)\Gamma(d+n+m-1)}
 =\prod_{\ell=0}^{m-1}
 \frac{d-1+\ell}{d+n-1+\ell}.
-\tag{E6}
+
 ```
 
 ## The exact allocation LP
@@ -293,16 +305,20 @@ and $`C_0=0`$, $`B_j=1-A_j-C_j`$. These coefficients are nonnegative. Defining $
 
 Let $`M`$ be the $`(k+1)\times k`$ matrix with nonzero entries
 
+**Equation (E7).**
+
 ```math
 M_{j,j}=\frac{1+B_j}{2},
 \qquad
 M_{j+1,j}=\frac{A_j}{2},
 \qquad
 M_{j-1,j}=\frac{C_j}{2}\quad(j\ge1).
-\tag{E7}
+
 ```
 
 **Theorem.** For $`n\ge m\ge1`$, with $`p`$ from (E5),
+
+**Equation (E8).**
 
 ```math
 \boxed{
@@ -312,7 +328,7 @@ q_d^*(n,m)=
 u_j\ge0,\ Mu\le p
 \right\}.
 }
-\tag{E8}
+
 ```
 
 Together with exchange symmetry and the zero-budget boundary, this characterizes every allocation. The residual $`R_{n-1,m-1}`$ contains exactly the sectors $`j=0,\ldots,k-1`$.
@@ -358,13 +374,15 @@ Each column of $`M`$ sums to one. Hence feasibility gives $`\sum_ju_j\le\sum_jp_
 
 Rigidity makes the vacuum component $`\mathsf A=(\langle\mathrm{vac},\mathrm{vac}|\otimes I)\mathsf V`$ annihilate the highest input sector. Since $`\mathsf A^\dagger\mathsf A\le I`$ and the weight (E6) is constant on the orbit, every exact processor obeys the pointwise bound
 
+**Equation (E9).**
+
 ```math
 p_\psi=2\|\mathsf A v_{n,m}(\psi)\|^2
 \le
 \min\left\{1,2(1-p_{\rm top})\right\}
 \le
 \min\left\{1,\frac{2nm}{d+\max(n,m)-1}\right\}.
-\tag{E9}
+
 ```
 
 For $`n\ge m`$, the last step uses
