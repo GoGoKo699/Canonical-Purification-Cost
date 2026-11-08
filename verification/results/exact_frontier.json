@@ -1,0 +1,88 @@
+{
+  "allocation_cases": 112,
+  "rational_recurrence_checks": 60,
+  "physical_matrix_checks": [
+    {
+      "d": 2,
+      "n": 1,
+      "m": 1,
+      "success": 0.6666666666666666,
+      "input_dimension": 4,
+      "residual_dimension": 1,
+      "largest_success_effect_eigenvalue": 0.9999999999999999
+    },
+    {
+      "d": 2,
+      "n": 2,
+      "m": 1,
+      "success": 0.7999999999999999,
+      "input_dimension": 6,
+      "residual_dimension": 2,
+      "largest_success_effect_eigenvalue": 1.0
+    },
+    {
+      "d": 2,
+      "n": 2,
+      "m": 2,
+      "success": 0.9230769230769225,
+      "input_dimension": 9,
+      "residual_dimension": 4,
+      "largest_success_effect_eigenvalue": 0.9999999999999993
+    },
+    {
+      "d": 2,
+      "n": 3,
+      "m": 2,
+      "success": 0.9600000000000005,
+      "input_dimension": 12,
+      "residual_dimension": 6,
+      "largest_success_effect_eigenvalue": 1.0000000000000016
+    },
+    {
+      "d": 2,
+      "n": 3,
+      "m": 3,
+      "success": 0.9841269841269844,
+      "input_dimension": 16,
+      "residual_dimension": 9,
+      "largest_success_effect_eigenvalue": 1.0000000000000016
+    },
+    {
+      "d": 3,
+      "n": 2,
+      "m": 2,
+      "success": 0.8421052631578947,
+      "input_dimension": 36,
+      "residual_dimension": 9,
+      "largest_success_effect_eigenvalue": 1.0000000000000004
+    },
+    {
+      "d": 3,
+      "n": 3,
+      "m": 2,
+      "success": 0.9090909090909093,
+      "input_dimension": 60,
+      "residual_dimension": 18,
+      "largest_success_effect_eigenvalue": 1.0000000000000013
+    }
+  ],
+  "two_by_two_certificate": {
+    "success": "12/13",
+    "primal": [
+      "5/13",
+      "7/13"
+    ],
+    "dual": [
+      "12/13",
+      "16/13",
+      "0"
+    ],
+    "status": "exact rational certificate passed"
+  },
+  "mixed_source_checks": {
+    "edge_and_boundary_cases": 19,
+    "certified_mixed_2_by_2": "331/780",
+    "status": "passed"
+  },
+  "status": "passed"
+}
