@@ -1,0 +1,172 @@
+{
+  "scope": "finite matrix checks only",
+  "cases": [
+    {
+      "d": 2,
+      "n": 1,
+      "q": 0.6666666666666666,
+      "max_residual": 2.220446049250313e-16,
+      "errors": {
+        "CCdagger": 0.0,
+        "E_isometry": 0.0,
+        "exact_output": 1.2501737100631045e-16,
+        "success": 0.0,
+        "norm": 2.220446049250313e-16,
+        "contractivity_excess": 0
+      }
+    },
+    {
+      "d": 2,
+      "n": 2,
+      "q": 0.8,
+      "max_residual": 6.280369834735101e-16,
+      "errors": {
+        "CCdagger": 6.280369834735101e-16,
+        "E_isometry": 3.1401849173675503e-16,
+        "exact_output": 7.966518072447689e-17,
+        "success": 1.1102230246251565e-16,
+        "norm": 4.440892098500626e-16,
+        "contractivity_excess": 0
+      }
+    },
+    {
+      "d": 2,
+      "n": 3,
+      "q": 0.8571428571428571,
+      "max_residual": 1.1102230246251565e-15,
+      "errors": {
+        "CCdagger": 1.0877919644084146e-15,
+        "E_isometry": 1.5700924586837752e-16,
+        "exact_output": 2.215290102795055e-16,
+        "success": 1.1102230246251565e-15,
+        "norm": 2.220446049250313e-16,
+        "contractivity_excess": 0
+      }
+    },
+    {
+      "d": 3,
+      "n": 1,
+      "q": 0.5,
+      "max_residual": 4.440892098500626e-16,
+      "errors": {
+        "CCdagger": 0.0,
+        "E_isometry": 0.0,
+        "exact_output": 5.808719835275756e-17,
+        "success": 1.1102230246251565e-16,
+        "norm": 4.440892098500626e-16,
+        "contractivity_excess": 0
+      }
+    },
+    {
+      "d": 3,
+      "n": 2,
+      "q": 0.6666666666666666,
+      "max_residual": 8.881784197001252e-16,
+      "errors": {
+        "CCdagger": 0.0,
+        "E_isometry": 6.661338147750939e-16,
+        "exact_output": 1.6176935876656645e-16,
+        "success": 2.220446049250313e-16,
+        "norm": 8.881784197001252e-16,
+        "contractivity_excess": 0
+      }
+    },
+    {
+      "d": 3,
+      "n": 3,
+      "q": 0.75,
+      "max_residual": 1.538370149106851e-15,
+      "errors": {
+        "CCdagger": 1.538370149106851e-15,
+        "E_isometry": 3.8459253727671276e-16,
+        "exact_output": 1.456670709064583e-16,
+        "success": 1.1102230246251565e-16,
+        "norm": 8.881784197001252e-16,
+        "contractivity_excess": 0
+      }
+    },
+    {
+      "d": 4,
+      "n": 1,
+      "q": 0.4,
+      "max_residual": 4.440892098500626e-16,
+      "errors": {
+        "CCdagger": 0.0,
+        "E_isometry": 0.0,
+        "exact_output": 8.16386106691605e-17,
+        "success": 0.0,
+        "norm": 4.440892098500626e-16,
+        "contractivity_excess": 0
+      }
+    },
+    {
+      "d": 4,
+      "n": 2,
+      "q": 0.5714285714285714,
+      "max_residual": 1.0877919644084146e-15,
+      "errors": {
+        "CCdagger": 0.0,
+        "E_isometry": 1.0877919644084146e-15,
+        "exact_output": 1.2417215590004783e-16,
+        "success": 1.1102230246251565e-16,
+        "norm": 4.440892098500626e-16,
+        "contractivity_excess": 0
+      }
+    },
+    {
+      "d": 4,
+      "n": 3,
+      "q": 0.6666666666666666,
+      "max_residual": 1.538370149106851e-15,
+      "errors": {
+        "CCdagger": 1.538370149106851e-15,
+        "E_isometry": 3.1401849173675503e-16,
+        "exact_output": 2.127088484703493e-16,
+        "success": 8.881784197001252e-16,
+        "norm": 8.881784197001252e-16,
+        "contractivity_excess": 4.440892098500626e-16
+      }
+    }
+  ],
+  "nontrivial_residual_X_case": {
+    "d": 2,
+    "n": 2,
+    "m": 2,
+    "residual_LP_weights": [
+      0.38461538461538464,
+      0.5384615384615384
+    ],
+    "residual_X_eigenvalues": [
+      0.7692307692307693,
+      1.0769230769230769
+    ],
+    "q": 0.9230769230769231,
+    "old_top_residual_filter_q": 0.5,
+    "effect_spectrum": [
+      0.5384615384615383,
+      0.5384615384615384,
+      0.5384615384615385,
+      0.5384615384615385,
+      0.5384615384615388,
+      0.9999999999999996,
+      0.9999999999999998,
+      0.9999999999999999,
+      1.0
+    ],
+    "max_residual": 8.881784197001252e-16,
+    "errors": {
+      "spectrum": 6.377745716588144e-16,
+      "E_isometry": 4.440892098500626e-16,
+      "factorization_0": 2.327457002045064e-16,
+      "success_0": 2.220446049250313e-16,
+      "factorization_1": 3.512164237633837e-16,
+      "success_1": 8.881784197001252e-16,
+      "factorization_2": 2.451419281284822e-16,
+      "success_2": 7.771561172376096e-16,
+      "factorization_3": 3.3757567631839744e-16,
+      "success_3": 8.881784197001252e-16,
+      "factorization_4": 1.3249051038025843e-16,
+      "success_4": 2.220446049250313e-16
+    }
+  }
+}

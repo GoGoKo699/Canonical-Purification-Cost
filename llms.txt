@@ -1,11 +1,15 @@
 # Canonical Purification Cost
 
-This repository studies the total-copy cost of preparing the canonical purification of a rank-two flat-spectrum state from independent samples of the state and its complex conjugate. The main theorem is Theta(sqrt(d)) at fixed squared fidelity above one half and fixed positive success probability below one, with arbitrary collective processing. An exactly matched purification/conjugate pair with a two-dimensional environment supplies an exact successful output from two specimens with probability 1/4.
+This repository studies the total-copy cost of preparing the canonical purification of a rank-two flat-spectrum state from independent samples of the state and its complex conjugate. The total-copy theorem is Theta(sqrt(d)) at fixed squared fidelity above one half and fixed positive success probability below one, with arbitrary collective processing. An exactly matched purification/conjugate pair with a two-dimensional environment supplies an exact successful output from two specimens with probability 1/4.
+
+The exact per-stream frontier is a separate result: q_d^*(n,1)=2n/(d+2n-1), every pure allocation is an attained min(n,m)-variable LP, and hard mixed caps have optimum E[q_d^*(K,L)] over independent binomial signal counts. The broad nm-of-order-d interpretation remains conjectural; no approximate-fidelity product law is claimed.
 
 ## Scientific routes
 
 - Overview: README.md and science/README.md.
 - Exact model, quantifiers and charged resources: science/model.md.
+- Pure exact filter norm, arbitrary-processor rigidity, charged harmonic weights and exact finite LP: science/exact_frontier.md.
+- Lossless mixed occupancy measurement, exact binomial frontier, rare-stream ceilings and fully counted repetitions: science/mixed_frontier.md.
 - Constructive channel, complete positivity and fixed mixed-copy budget: science/construction.md.
 - Fischer decomposition, projective reproducing kernels and multiplication bound: science/harmonic_analysis.md.
 - Arbitrary-processor approximate converse: science/converse.md.
@@ -23,6 +27,11 @@ This repository studies the total-copy cost of preparing the canonical purificat
 
 ## Essential distinctions
 
-The theorem counts all source preparations under a hard total-copy cap. It is not an individual lower bound on each stream. The conjugate state is supplied in a known basis; it is not assumed generically available from an unknown source. The constant comparison requires exactly matched conjugation and a constant environmental dimension. Flat spectrum makes the normalized vectorization of rho equal its canonical purification. The source family includes a known vacuum direction. The result concerns quantum output and does not resolve a decision-only sample/query lifting conjecture. Gate-efficient synthesis of the collective filter is not established.
+The total-copy theorem counts all source preparations under a hard total-copy cap. The exact mixed allocation theorem instead uses separate caps A,B with total maximum A+B; it does not apply precollection under an additional tighter total cap. It is not an individual lower bound on each stream. The conjugate state is supplied in a known basis; it is not assumed generically available from an unknown source. The constant comparison requires exactly matched conjugation and a constant environmental dimension. Flat spectrum makes the normalized vectorization of rho equal its canonical purification. The source family includes a known vacuum direction. The result concerns quantum output and does not resolve a decision-only sample/query lifting conjecture. Gate-efficient synthesis of the collective filter is not established.
 
 The scientific pages own the proofs. The learning map organizes their conceptual dependencies, and the bridge explains the transition from the selected source. Numerical examples test finite implementations and normalization rather than replace a general proof.
+
+
+## Sister boundary
+
+Quantum-Program-Composition shares coherent contraction and whole-space normalization, but its full unitary Choi inputs and generally approximate successful polar output differ. Its d^2 copy-product theorem is not a premise of the canonical exact frontier. The current repository owns the canonical proof; science/mixed_frontier.md explains the boundary and links the reciprocal account.

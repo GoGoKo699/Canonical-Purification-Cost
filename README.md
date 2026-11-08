@@ -2,28 +2,39 @@
 
 How many physical samples are needed to assemble a specified purification of an unknown mixed state? This project gives matching bounds for a rank-two family whose spectrum is already known. The source supplies both the mixed state and its complex conjugate, so the remaining task is to create the required coherent correlation.
 
-Let $|\mathrm{vac}\rangle$ be a known reference state and let $|\psi\rangle$ be an unknown unit vector in an orthogonal $d$-dimensional signal space. Define
+Let $`|\mathrm{vac}\rangle`$ be a known reference state and let $`|\psi\rangle`$ be an unknown unit vector in an orthogonal $`d`$-dimensional signal space. Define
 
-$$
+```math
 \rho_\psi=\frac{|\mathrm{vac}\rangle\langle\mathrm{vac}|+|\psi\rangle\langle\psi|}{2},
 \qquad
 |T_\psi\rangle=\frac{|\mathrm{vac},\mathrm{vac}\rangle+|\psi\rangle|\psi^*\rangle}{\sqrt2}.
-$$
+```
 
-The target is the canonical purification of $\rho_\psi$ in a fixed supplied basis.
+The target is the canonical purification of $`\rho_\psi`$ in a fixed supplied basis.
 
-## Principal result
+## Principal results
 
-Independent copies of $\rho_\psi$ and $\rho_\psi^*$ require and suffice with **$\Theta(\sqrt d)$ total copies** to prepare the target at fixed nontrivial fidelity and success probability. The lower bound allows arbitrary collective operations, quantum memory, adaptive instruments and approximate outputs. The construction produces the exact target on its successful branch.
+Independent copies of $`\rho_\psi`$ and $`\rho_\psi^*`$ require and suffice with **$`\Theta(\sqrt d)`$ total copies** to prepare the target at fixed nontrivial fidelity and success probability. The lower bound allows arbitrary collective operations, quantum memory, adaptive instruments and approximate outputs. The construction produces the exact target on its successful branch.
 
-| Supplied resource | Supported preparation guarantee |
+| Resource and output criterion | Established guarantee |
 |---|---|
-| Independent mixed samples and their conjugates | Optimal total copy cost $\Theta(\sqrt d)$ at fixed error and success |
-| A purification with a two-dimensional environment, together with its exactly matched conjugate | Two source preparations give the exact target with probability $1/4$ |
+| Independent mixed samples, fixed error and success | Optimal hard total copy cost $`\Theta(\sqrt d)`$ |
+| $`n`$ pure state copies and one conjugate copy, exact heralding | Sharp optimum $`q_d^*(n,1)=2n/(d+2n-1)`$ |
+| Arbitrary pure hard allocation $`(n,m)`$, exact heralding | Attained finite LP with $`\min(n,m)`$ variables |
+| Mixed hard separate caps $`(A,B)`$, exact heralding | Exact binomial average $`Q_d^*(A,B)=\mathbb E[q_d^*(K,L)]`$ |
+| Matched purification/conjugate pair with environment dimension two | Two source preparations give the exact target with probability $`1/4`$ |
 
-The first statement uses a hard total-copy budget. More precisely, it holds for every fixed conditional squared fidelity $F_0\in(1/2,1]$ and success probability $p_{\min}\in(0,1)$, or for deterministic preparation with fixed squared fidelity $F_0\in(1/2,1)$. It does not require a separate lower bound on each sample stream. Every source preparation, including those in rejected attempts, is charged.
+The first statement uses a hard total-copy budget. More precisely, it holds for every fixed conditional squared fidelity $`F_0\in(1/2,1]`$ and success probability $`p_{\min}\in(0,1)`$, or for deterministic preparation with fixed squared fidelity $`F_0\in(1/2,1)`$. It does not require a separate lower bound on each sample stream. Every source preparation, including those in rejected attempts, is charged.
 
 The comparison shows what is lost when the purifying registers are discarded. Both sample streams already contain the unknown direction and its conjugate. Retaining a matched pair of small purifying registers additionally permits coherent assembly of the two target branches. The cost of recovering that capability from independent marginals grows with the ambient dimension even though the source rank is only two.
+
+The [exact unequal-budget frontier](science/exact_frontier.md) uses polynomial rigidity and charged harmonic kernels to cover arbitrary processors. It gives $`q_2^*(2,2)=12/13`$, improving the simple balanced residual-projection filter's $`1/2`$ success at that allocation. The [mixed-source frontier](science/mixed_frontier.md) counts every requested specimen, with independent signal counts $`K\sim\mathrm{Bin}(A,1/2)`$ and $`L\sim\mathrm{Bin}(B,1/2)`$. One conjugate mixed specimen imposes success at most $`1/2`$, however large the other supply.
+
+These exact statements concern separate hard caps with total maximum $`A+B`$. They do not characterize a stricter simultaneous total cap. The broad $`nm`$-of-order-$`d`$ interpretation remains conjectural here; no fixed-approximate-fidelity product law is inferred.
+
+## Sister relationship
+
+[Quantum-Program-Composition](https://github.com/GoGoKo699/Quantum-Program-Composition) shares the method of coherent contraction across symmetric copy pools followed by whole-space physical normalization. This repository owns the exact canonical-purification rigidity, allocation LP and mixed-source frontier. The [composition-side boundary account](https://github.com/GoGoKo699/Quantum-Program-Composition/blob/main/science/canonical_purification_boundary.md) explains why its unitary-Choi theorem and generally approximate successful polar output do not transfer to this target. The relationship supplies a common method and a precise operational boundary, rather than a substitution of $`d`$ for $`d^2`$.
 
 ## Read the science
 
@@ -32,6 +43,8 @@ Start with the [model and theorem](science/model.md). The [science guide](scienc
 | Question | Authoritative account |
 |---|---|
 | What is supplied, produced and counted? | [Operational model](science/model.md) |
+| What is the exact optimum for each unequal pure allocation? | [Exact frontier and arbitrary-processor converse](science/exact_frontier.md) |
+| How do hard mixed-source caps enter the exact frontier? | [Lossless extraction and binomial frontier](science/mixed_frontier.md) |
 | How does the protocol reach the square-root scale? | [Exact construction and finite copy budget](science/construction.md) |
 | Which symmetry identities control the bound? | [Projective harmonics](science/harmonic_analysis.md) |
 | Why can arbitrary approximate processors do no better? | [Converse](science/converse.md) |
@@ -50,7 +63,7 @@ The [verification guide](verification/README.md) specifies the environment, comm
 
 The known reference direction, flat rank-two spectrum and fixed conjugation basis are part of the model. The constant-cost comparison supplies an exactly conjugate-correlated pair with a known constant environmental dimension. Arbitrary purifications with unrelated gauges do not provide that resource. The result concerns producing a quantum state; no decision-query separation is claimed.
 
-The upper bound is information theoretic. Efficient gate synthesis of the collective traceless-sector filter, general-rank preparation, vanishing-error optimality and a sharp unbalanced-copy law are outside the established result. [Related work](references/RELATED_WORK.md) credits the existing random-purification, superposition and mixed-tensor methods that inform the proof.
+The upper bounds and optimal filters are information theoretic. The exact unequal-allocation LP is established, while an elementary all-allocation formula, efficient gate synthesis, general-rank preparation and sharp approximate-fidelity allocation laws remain open. [Related work](references/RELATED_WORK.md) credits the existing random-purification, superposition and mixed-tensor methods that inform the proof.
 
 ## Purpose and contact
 

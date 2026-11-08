@@ -2,16 +2,16 @@
 
 [Learning guide](README.md) · [Educational anchor and bridge](anchor.md) · [Scientific guide](../science/README.md) · [Exact model and theorem](../science/model.md)
 
-The project asks how many independent copies of an unknown mixed state and its complex conjugate are needed to prepare a specified pure correlation. The promised family has a known vacuum direction and one unknown signal direction. Its canonical purification requires coherence between the vacuum pair and the conjugate signal pair. The result identifies the total copy cost of producing that coherence and compares samples with a source that supplies matched conjugate purifications.
+The project asks how many independent copies of an unknown mixed state and its complex conjugate are needed to prepare a specified pure correlation. The promised family has a known vacuum direction and one unknown signal direction. Its canonical purification requires coherence between the vacuum pair and the conjugate signal pair. The project determines the exact heralded frontier for hard separate source budgets, retains the robust total-copy theorem for approximate output, and compares samples with matched conjugate purifications.
 
 This map has exactly thirty understanding targets. The allocation follows the proof rather than the chapter order of the educational source.
 
 | Phase | Milestones | Role in the scientific account |
 |---|---|---|
 | Background/preliminaries | M01–M13 | Connect states, purifications, physical operations, success criteria, sample resources, symmetry, and averaged amplitudes into a precise preparation problem. M13 integrates this framework. |
-| Narrative/innovation | M14–M30 | Develop the collective construction and its physical normalization, the harmonic quantities shared by both proofs, the unrestricted converse, and the access comparison. M30 integrates the result and its limits. |
+| Narrative/innovation | M14–M30 | Connect exact filters to polynomial rigidity, the all-allocation LP and the mixed-source binomial frontier; then situate them beside the inherited robust total-copy theorem and matched-purification comparison. M30 integrates the result and its limits. |
 
-Thirteen foundational milestones are useful because the argument connects three kinds of reasoning: physical operations on states, hard resource accounting, and orthogonal decompositions of functions of an unknown direction. Seventeen narrative milestones then follow the two proofs and the operational comparison. The construction and converse meet at the same normalized harmonic decomposition: it measures the residual weight retained by the construction and the coherence available to an arbitrary processor. Each phase moves from individual objects and mechanisms to the complete statement it supports.
+Thirteen foundational milestones are useful because the argument connects three kinds of reasoning: physical operations on states, hard resource accounting, and orthogonal decompositions of functions of an unknown direction. Seventeen narrative milestones then connect local contraction to unrestricted exact processing, hard mixed-source accounting, and the two existing comparisons. The normalized harmonic decomposition supports both the finite exact frontier and the inherited approximate converse, but those results have different success and budget quantifiers. Each phase moves from individual objects and mechanisms to the complete statement it supports.
 
 The sole educational anchor is **[Watrous2018]**, John Watrous, *The Theory of Quantum Information* (2018). Section numbers below refer to that text; the [anchor guide](anchor.md#where-to-enter-the-textbook) supplies the entry points and notation translation. The project derives its Fischer decomposition, normalized projective kernels, and multiplication lemma locally. Their research attribution remains in [harmonic analysis](../science/harmonic_analysis.md#references) and [related work](../references/RELATED_WORK.md); these are scientific source dependencies, rather than additional educational anchors.
 
@@ -25,7 +25,7 @@ Milestone dependencies name earlier milestones. Source pointers distinguish text
 
 **Central question:** What is unknown about a pure state, and what does a supplied basis make meaningful?
 
-**Understanding target:** A unit vector represents a pure state up to a global phase. The known decomposition into a vacuum direction and a signal space fixes where the unknown vector lives. Componentwise conjugation refers to the supplied basis, while the pair $\psi\otimes\psi^*$ is unchanged by the global phase of $\psi$. Watrous uses a star for an adjoint; the project uses $\dagger$ for adjoints and a star for entrywise conjugation.
+**Understanding target:** A unit vector represents a pure state up to a global phase. The known decomposition into a vacuum direction and a signal space fixes where the unknown vector lives. Componentwise conjugation refers to the supplied basis, while the pair $`\psi\otimes\psi^*`$ is unchanged by the global phase of $`\psi`$. Watrous uses a star for an adjoint; the project uses $`\dagger`$ for adjoints and a star for entrywise conjugation.
 
 **Dependencies and story role:** No earlier milestone is required. This establishes the elementary object on which every source and target depends.
 
@@ -57,7 +57,7 @@ Milestone dependencies name earlier milestones. Source pointers distinguish text
 
 **Dependencies and story role:** Uses M01–M02. It extends the local state description to the source streams, target pair, and inaccessible environments.
 
-**Conceptual connection:** The shared parameter $\psi$ is distinct from a supplied common environment or a matched purification gauge. This distinction will determine which resources can be simulated by samples.
+**Conceptual connection:** The shared parameter $`\psi`$ is distinct from a supplied common environment or a matched purification gauge. This distinction will determine which resources can be simulated by samples.
 
 **Sources:** [Watrous2018], §§1.1.1 and 2.1.3; [State family and fixed basis](../science/model.md#state-family-and-fixed-basis); [access-comparison introduction](../science/access_comparison.md).
 
@@ -67,7 +67,7 @@ Milestone dependencies name earlier milestones. Source pointers distinguish text
 
 **Central question:** What additional choice is made when a purification is required to be canonical?
 
-**Understanding target:** A purification is a pure joint state with a specified reduced density operator. Transforming its environment can leave that reduction unchanged. Fixing a basis defines the canonical vector $\operatorname{vec}(\sqrt\rho)$, so preparing this vector imposes a particular correlation structure. Correct marginals alone do not specify it.
+**Understanding target:** A purification is a pure joint state with a specified reduced density operator. Transforming its environment can leave that reduction unchanged. Fixing a basis defines the canonical vector $`\mathrm{vec}(\sqrt\rho)`$, so preparing this vector imposes a particular correlation structure. Correct marginals alone do not specify it.
 
 **Dependencies and story role:** Uses M01–M03. It turns the distinction between marginal and joint information into an exact output requirement.
 
@@ -81,7 +81,7 @@ Milestone dependencies name earlier milestones. Source pointers distinguish text
 
 **Central question:** What makes a proposed linear operation a possible quantum operation?
 
-**Understanding target:** Complete positivity expresses compatibility with untouched ancillary systems. A channel preserves trace; an accepted branch may decrease it. For a single successful Kraus operator $K$, the condition $K^\dagger K\leq I$ bounds the success probability on the entire input space. Correct action on a promised family of vectors does not by itself establish this operator inequality.
+**Understanding target:** Complete positivity expresses compatibility with untouched ancillary systems. A channel preserves trace; an accepted branch may decrease it. For a single successful Kraus operator $`K`$, the condition $`K^\dagger K\leq I`$ bounds the success probability on the entire input space. Correct action on a promised family of vectors does not by itself establish this operator inequality.
 
 **Dependencies and story role:** Uses M02–M03 and the vector language of M01. It establishes the physicality criterion used by both the construction and the converse.
 
@@ -95,7 +95,7 @@ Milestone dependencies name earlier milestones. Source pointers distinguish text
 
 **Central question:** How should the quality and probability of a successful output be kept separate?
 
-**Understanding target:** An instrument records outcomes and their corresponding quantum outputs. A successful branch produces a positive operator $\tau$ whose trace is the success probability $p$. Its conditional state is $\tau/p$ when $p>0$. Discarding a failure does not erase the specimens it consumed, and combining accepted outcomes requires retaining their probabilities.
+**Understanding target:** An instrument records outcomes and their corresponding quantum outputs. A successful branch produces a positive operator $`\tau`$ whose trace is the success probability $`p`$. Its conditional state is $`\tau/p`$ when $`p>0`$. Discarding a failure does not erase the specimens it consumed, and combining accepted outcomes requires retaining their probabilities.
 
 **Dependencies and story role:** Uses M03 and M05. It provides the accounting language for filtering, repetition, and a converse that permits postselection.
 
@@ -109,7 +109,7 @@ Milestone dependencies name earlier milestones. Source pointers distinguish text
 
 **Central question:** What does a fidelity guarantee mean in this project, including after postselection?
 
-**Understanding target:** Watrous Definition 3.11 uses root fidelity. For a normalized output $\sigma$ and pure target $T$, the project's convention is its square, $\langle T|\sigma|T\rangle$. For an accepted output $\tau$, the conditional squared fidelity is $\langle T|\tau|T\rangle/\operatorname{Tr}\tau$. The known vacuum pair achieves squared fidelity $1/2$, so a fixed improvement above this value is the relevant demand.
+**Understanding target:** Watrous Definition 3.11 uses root fidelity. For a normalized output $`\sigma`$ and pure target $`T`$, the project's convention is its square, $`\langle T|\sigma|T\rangle`$. For an accepted output $`\tau`$, the conditional squared fidelity is $`\langle T|\tau|T\rangle/\mathrm{Tr}\tau`$. The known vacuum pair achieves squared fidelity $`1/2`$, so a fixed improvement above this value is the relevant demand.
 
 **Dependencies and story role:** Uses M02, M04, and M06. It fixes the performance criterion before any resource bound is stated.
 
@@ -117,19 +117,19 @@ Milestone dependencies name earlier milestones. Source pointers distinguish text
 
 **Sources:** [Watrous2018], §3.2, Definition 3.11, and §3.2.1; [Fidelity and success conventions](../science/model.md#fidelity-and-success-conventions); [anchor translation](anchor.md#translation-into-the-project-model).
 
-### M08: State access and a hard total budget
+### M08: State access and hard budgets
 
 **Phase:** Background/preliminaries.
 
 **Central question:** Which resources are counted when a processor is given samples?
 
-**Understanding target:** The source supplies independent density operators without their purifying environments or preparation unitaries. A hard total budget bounds requests on every execution branch across both streams. It includes rejected samples, discarded vacuum outcomes, and failed repetitions. Coherent processing of received registers and adaptive classical source choices remain allowed.
+**Understanding target:** The source supplies independent density operators without their purifying environments or preparation unitaries. Hard separate caps bound requests from each stream on every execution branch; a hard total cap bounds their sum. Both count rejected samples, discarded vacuum outcomes and failed repetitions. Coherent processing of received registers and adaptive classical source choices remain allowed.
 
 **Dependencies and story role:** Uses M03 and M05–M07. It specifies the resource whose cost the theorem measures.
 
-**Conceptual connection:** A bound on expected requests, a bound for each stream separately, and a hard bound on their total are different assertions. The project proves the last of these.
+**Conceptual connection:** A bound on expected requests, hard separate caps, and a hard total cap are different assertions. The exact frontier uses separate caps; the robust total-copy theorem uses a total cap. An additional stricter total cap cannot be inserted into the binomial formula without another argument.
 
-**Sources:** [Watrous2018], §§2.1.3 and 2.2.2 for the state/channel distinction; [Allowed processors and the hard budget](../science/model.md#allowed-processors-and-the-hard-budget); [preparation-oracle scope](../science/access_comparison.md#preparation-oracle-interpretation-and-scope).
+**Sources:** [Watrous2018], §§2.1.3 and 2.2.2 for the state/channel distinction; [hard-budget model](../science/model.md); [mixed-source frontier](../science/mixed_frontier.md); [preparation-oracle scope](../science/access_comparison.md#preparation-oracle-interpretation-and-scope).
 
 ### M09: Repeated copies and symmetric spaces
 
@@ -137,13 +137,13 @@ Milestone dependencies name earlier milestones. Source pointers distinguish text
 
 **Central question:** What structure is present in many identical pure specimens before any processing occurs?
 
-**Understanding target:** The vector $\psi^{\otimes N}$ belongs to the symmetric subspace because exchanging its factors changes nothing. Balanced conjugate specimens occupy $\mathcal R_N=\operatorname{Sym}^N(V)\otimes\operatorname{Sym}^N(\overline V)$. Normalized occupation coordinates describe this subspace and make contraction and extraction operators explicit; they do not assume a physical bosonic implementation.
+**Understanding target:** The vector $`\psi^{\otimes N}`$ belongs to the symmetric subspace because exchanging its factors changes nothing. Unequal conjugate specimens occupy $`\mathcal R_{n,m}=\mathrm{Sym}^n(V)\otimes\mathrm{Sym}^m(\overline V)`$; balanced inputs have $`n=m=N`$. Normalized occupation coordinates describe this subspace and make contraction and extraction operators explicit; they do not assume a physical bosonic implementation.
 
 **Dependencies and story role:** Uses M01, M03, and M08. It identifies the finite input space on which collective operations and the stronger-input converse are analyzed.
 
 **Conceptual connection:** Permutation symmetry of the input reduces its mathematical description while leaving the processor unrestricted.
 
-**Sources:** [Watrous2018], §7.1.1; [Symmetric input spaces](../science/construction.md#symmetric-input-spaces); [polynomial realization](../science/harmonic_analysis.md#1-conventions-and-the-polynomial-realization).
+**Sources:** [Watrous2018], §7.1.1; [Symmetric input spaces](../science/construction.md#symmetric-input-spaces); [polynomial realization](../science/harmonic_analysis.md#1-conventions-and-the-polynomial-realization); [unequal pure-copy spaces](../science/exact_frontier.md).
 
 ### M10: Unitary invariance and averaged guarantees
 
@@ -151,11 +151,11 @@ Milestone dependencies name earlier milestones. Source pointers distinguish text
 
 **Central question:** Why is an average over unknown directions useful for a worst-case preparation problem?
 
-**Understanding target:** Haar probability measure treats every signal direction equally. A guarantee valid for every direction implies the corresponding averaged success and overlap guarantees. If $q(\psi)$ is success probability and $g(\psi)$ is unnormalized target overlap, then $(\int g)/(\int q)$ is the fidelity averaged over successful runs; it generally differs from $\int(g/q)$.
+**Understanding target:** Haar probability measure treats every signal direction equally. A guarantee valid for every direction implies the corresponding averaged success and overlap guarantees. If $`q(\psi)`$ is success probability and $`g(\psi)`$ is unnormalized target overlap, then $`(\int g)/(\int q)`$ is the fidelity averaged over successful runs; it generally differs from $`\int(g/q)`$.
 
 **Dependencies and story role:** Uses M01, M06–M08. It supplies a probability framework for an impossibility proof without replacing the stated worst-case task.
 
-**Conceptual connection:** Averaging the input orbit is an analysis tool. It does not assert that an optimal or admissible processor must be covariant.
+**Conceptual connection:** The robust converse uses symmetry to analyze the supplied orbit without restricting processors. For the exact frontier, a later proof shows that averaging feasible maps preserves exactness and converts average success into a uniform optimum.
 
 **Sources:** [Watrous2018], §§1.2.2 and 7.2.1; [Target, success probability, and fidelity](../science/converse.md#1-target-success-probability-and-fidelity), (C3)–(C4).
 
@@ -165,13 +165,13 @@ Milestone dependencies name earlier milestones. Source pointers distinguish text
 
 **Central question:** How does a finite copy supply restrict dependence on the unknown direction?
 
-**Understanding target:** Coordinates of the balanced input are polynomials with $N$ factors of $\psi$ and $N$ factors of $\overline\psi$. Fixed linear maps preserve this finite polynomial space. Haar integration defines an $L^2$ inner product in which functions can be separated into orthogonal harmonic degrees. A projection in this function space is distinct from a projection on input tensors; their norm conversion must be derived.
+**Understanding target:** Coordinates of an unequal input are bihomogeneous polynomials with $`n`$ factors of $`\psi`$ and $`m`$ factors of $`\overline\psi`$. Fixed linear maps preserve this finite polynomial space. Haar integration defines an $`L^2`$ inner product in which functions can be separated into orthogonal harmonic degrees. A projection in this function space is distinct from a projection on input tensors; their norm conversion must be derived.
 
 **Dependencies and story role:** Uses M09–M10 and the inner products of M01. It introduces the mathematical language of the lower bound before its specialized identities.
 
 **Conceptual connection:** Copy number controls polynomial degree. Orthogonality then limits which output amplitudes can overlap coherently.
 
-**Sources:** [Watrous2018], §§1.1.1, 7.1.1, and 7.2.1 for the underlying spaces and measure; [polynomial realization](../science/harmonic_analysis.md#1-conventions-and-the-polynomial-realization), (H1)–(H7); [tensor/function norm conversion](../science/harmonic_analysis.md#5-orbit-weights-and-haar-moments), (H30)–(H31).
+**Sources:** [Watrous2018], §§1.1.1, 7.1.1, and 7.2.1 for the underlying spaces and measure; [polynomial realization](../science/harmonic_analysis.md#1-conventions-and-the-polynomial-realization), (H1)–(H7); [tensor/function norm conversion](../science/harmonic_analysis.md#5-orbit-weights-and-haar-moments), (H30)–(H31); [exact rigidity and unequal harmonics](../science/exact_frontier.md).
 
 ### M12: One representation of an arbitrary processor
 
@@ -179,7 +179,7 @@ Milestone dependencies name earlier milestones. Source pointers distinguish text
 
 **Central question:** How can a single mathematical description include memory, measurements, discarded systems, and accepted outcomes?
 
-**Understanding target:** A Stinespring representation stores discarded information in an environment. Combining all accepted Kraus operators gives a contraction into output and environment registers. Measurement records can be retained in orthogonal environment states. Output amplitudes are consequently environment-valued functions of $\psi$, and orthogonality and norm bounds apply componentwise.
+**Understanding target:** A Stinespring representation stores discarded information in an environment. Combining all accepted Kraus operators gives a contraction into output and environment registers. Measurement records can be retained in orthogonal environment states. Output amplitudes are consequently environment-valued functions of $`\psi`$, and orthogonality and norm bounds apply componentwise.
 
 **Dependencies and story role:** Uses M05–M06 and M09–M11. It joins physical admissibility with the function-space description needed for an unrestricted converse.
 
@@ -193,13 +193,13 @@ Milestone dependencies name earlier milestones. Source pointers distinguish text
 
 **Central question:** What must be specified to make a purification copy-cost statement meaningful?
 
-**Understanding target:** A complete statement fixes the unknown state family, known basis and subspaces, supplied registers, permitted operations, target representative, success criterion, fidelity convention, and hard total budget. These choices determine which simulations and comparisons are valid. The proof needs both a physically valid finite-budget construction and an impossibility bound for every allowed processor.
+**Understanding target:** A complete statement fixes the unknown state family, known basis and subspaces, supplied registers, permitted operations, target representative, exact or approximate success criterion, fidelity convention and hard budget convention. These choices determine which simulations and comparisons are valid. The proof needs both a physically valid finite-budget construction and an impossibility bound for every allowed processor.
 
 **Dependencies and story role:** Integrates M01–M12 and completes the background phase. It connects the local definitions into one operational framework.
 
 **Conceptual connection:** The target's coherence, the source's inaccessible environments, and the hard-budget convention jointly define the scientific problem. None can be inferred from the phrase “purification” alone.
 
-**Sources:** [Watrous2018], §§2.1.3, 2.2.2, and 3.2; [Model and total copy complexity](../science/model.md); [bridge to the proof](anchor.md#from-textbook-foundations-to-the-proof).
+**Sources:** [Watrous2018], §§2.1.3, 2.2.2, and 3.2; [model and theorem domains](../science/model.md); [exact pure frontier](../science/exact_frontier.md); [mixed frontier](../science/mixed_frontier.md); [bridge to the proof](anchor.md#from-textbook-foundations-to-the-proof).
 
 ## Phase II: Narrative/innovation
 
@@ -209,263 +209,263 @@ Milestone dependencies name earlier milestones. Source pointers distinguish text
 
 **Central question:** What can one pure specimen from each conjugate stream already accomplish?
 
-**Understanding target:** The signal-pair vector has a known overlap with the unnormalized vector $\Omega_d=\sum_i|i,i\rangle$. A coherent combination of contraction onto this vector and retention of the signal pair produces the desired vacuum/signal superposition. Physical normalization gives exact success probability $q_1=2/(d+1)$, which decreases with dimension.
+**Understanding target:** The signal-pair vector has known contraction against $`\Omega_d=\sum_i|i,i\rangle`$. Coherently combining that contraction with retention of the signal pair produces the vacuum/signal target. Physical normalization gives exact success $`2/(d+1)`$. The accepted residual is scalar, so no unknown branch record remains to destroy the required coherence.
 
-**Dependencies and story role:** Uses M04–M09 and the framework of M13. It begins the narrative with a complete local mechanism and identifies what collective processing must improve.
+**Dependencies and story role:** Uses M04–M09 and M13. It begins the narrative with one complete finite transformation and the normalization obstacle that collective copies address.
 
-**Conceptual connection:** The unknown global phase cancels, allowing a known-reference superposition mechanism. The quantitative obstacle is the normalization needed for a valid operation.
+**Conceptual connection:** Exact target production and a low success probability are compatible; success probability must remain part of the operational claim.
 
-**Sources:** [Watrous2018], §§1.1.2 and 2.2.2; [one specimen from each stream](../science/construction.md#the-case-of-one-specimen-from-each-stream); [worked signal example](anchor.md#a-two-dimensional-signal-example); [fixed-reference attribution](../references/RELATED_WORK.md#fixed-reference-superposition).
+**Sources:** [Watrous2018], §§1.1.2, 2.2.2; [one-pair filter](../science/construction.md#the-case-of-one-specimen-from-each-stream); [exact frontier](../science/exact_frontier.md); [fixed-reference attribution](../references/RELATED_WORK.md#fixed-reference-superposition).
 
-### M15: Collective contraction and extraction
-
-**Phase:** Narrative/innovation.
-
-**Central question:** How can two branches of a collective operation leave the same unknown residual state?
-
-**Understanding target:** On balanced pure inputs, the contraction $C_N$ removes a conjugate pair with amplitude $N$, while the isometry $E_N$ extracts a signal pair. Their coherent combination leaves $v_{N-1}(\psi)$ in both branches and places the target in the output. Equal residual vectors prevent the environment from distinguishing the vacuum and signal alternatives.
-
-**Dependencies and story role:** Uses M09, M12, and M14. It extends the one-pair mechanism to many copies while exposing the remaining operator-norm issue.
-
-**Conceptual connection:** Exact output factorization concerns what happens on the promised orbit. It is the mechanism to preserve, while the next step supplies a physical normalization on all inputs.
-
-**Sources:** [Watrous2018], §§1.1.2, 2.1.3, and 7.1.1; [Contraction and extraction](../science/construction.md#contraction-and-extraction).
-
-### M16: Residual filtering and the whole-space Kraus norm
+### M15: Unequal contraction and a common residual
 
 **Phase:** Narrative/innovation.
 
-**Central question:** Why does filtering the residual systems turn the collective formula into a valid accepted operation?
+**Central question:** How can different copy supplies leave the same residual in both target branches?
 
-**Understanding target:** The projector $P_{N-1}$ retains the residual sector annihilated by pair contraction. The identity $C_NC_N^\dagger P_{N-1}=(d+2N-2)P_{N-1}$ controls the contraction branch; the extraction branch is bounded by its isometry property. Together they give $K_N^\dagger K_N\leq I$ on the entire symmetric input space, with a zero extension outside it and a complementary failure outcome.
+**Understanding target:** For pure budgets $`(n,m)`$, the annihilator contraction $`C=\sum_i a_i b_i`$ obeys $`Cv_{n,m}=\sqrt{nm}\,v_{n-1,m-1}`$. The extraction isometry $`E=(nm)^{-1/2}\sum_{ij}|i,j\rangle\otimes a_i b_j`$ retains the unknown signal pair. Their combination $`W=(|\mathrm{vac},\mathrm{vac}\rangle C/\sqrt{nm}+E)/\sqrt2`$ therefore sends a promised input to $`T_\psi\otimes v_{n-1,m-1}`$.
 
-**Dependencies and story role:** Uses M05–M06 and M15. It supplies the construction's physicality proof before computing accepted probability.
+**Dependencies and story role:** Uses M09, M12 and M14. It extends the elementary operation to arbitrary supplies before making an optimality assertion.
 
-**Conceptual connection:** The residual state may remain unknown because it factors from the target. Its retained weight matters for success, while the operator inequality governs admissibility on arbitrary superpositions of inputs.
+**Conceptual connection:** The two output alternatives share one residual vector. Whole-space normalization is still required even though their action on each promised input is correct.
 
-**Sources:** [Watrous2018], §§1.1.3 and 2.2.2; [A filter on the residual systems](../science/construction.md#a-filter-on-the-residual-systems); [Complete positivity and exact output](../science/construction.md#complete-positivity-and-exact-output).
+**Sources:** [Watrous2018], §§1.1.2, 2.1.3, 7.1.1; [unequal exact filter](../science/exact_frontier.md); [balanced construction](../science/construction.md#contraction-and-extraction).
 
-### M17: Traces, harmonics, and multiplicity one
-
-**Phase:** Narrative/innovation.
-
-**Central question:** What is the residual sector retained by the filter, and how does it organize the whole input space?
-
-**Understanding target:** In polynomial coordinates, pair contraction becomes a Laplacian and insertion of a trace becomes its Fischer adjoint. Their ladder relation decomposes balanced polynomials into traceless harmonic pieces. Under $U(d)$ these pieces are irreducible and occur once each. The top tensor projector $P_N$ selects the contraction kernel, and its function counterpart selects harmonic degree $N$.
-
-**Dependencies and story role:** Uses M09–M11 and M16. It gives the mathematical decomposition that supports both the success calculation and the converse.
-
-**Conceptual connection:** The same trace-removal operation has an operational role as a filter and an analytic role as separation by harmonic degree. The local proof establishes the representation facts rather than assuming them from permutation symmetry alone.
-
-**Sources:** [Watrous2018], §§1.1.1–1.1.2 and 7.1.1 for foundational linear algebra and symmetry; [Fischer decomposition](../science/harmonic_analysis.md#2-fischer-decomposition-and-the-traceless-sector), (H8)–(H14); [irreducibility and multiplicity one](../science/harmonic_analysis.md#3-irreducibility-and-multiplicity-one), (H15)–(H17).
-
-### M18: Normalized kernels and exact orbit weights
+### M16: One conjugate copy and entire-space contractivity
 
 **Phase:** Narrative/innovation.
 
-**Central question:** How much of a coherent input lies in each harmonic sector, with all normalization factors fixed?
+**Central question:** Why is the n-by-one filter physical without a residual projection?
 
-**Understanding target:** Probability-normalized Haar measure gives the addition kernel $K_\ell=h_\ell Q_\ell$, with $Q_\ell(1)=1$ and squared radial norm $1/h_\ell$. Expanding the input kernel $t^N$ in these polynomials identifies its sector weights. In particular,
+**Understanding target:** At $`m=1`$, the residual is $`\mathrm{Sym}^{n-1}(V)`$. The extraction is an isometry and $`CC^\dagger=(d+n-1)I`$ there, so
+```math
+W^\dagger W=\frac12(I+C^\dagger C/n),
+\qquad
+\|W\|^2=\frac{d+2n-1}{2n}.
+```
+Scaling by the reciprocal norm gives exact uniform success $`2n/(d+2n-1)`$. Extending the filter by zero outside the separately symmetric input space and adding the complementary failure effect defines a physical instrument.
 
-$$
-p_N=\|P_Nv_N(\psi)\|^2
-=\prod_{j=0}^{N-1}\frac{d-1+j}{d-1+N+j}.
-$$
+**Dependencies and story role:** Uses M05, M09 and M15. It supplies a sharp achievable edge case through an operator bound on all inputs.
 
-The Haar moment also fixes the conversion between tensor norms and function norms.
+**Conceptual connection:** No residual trace removal is needed after the conjugate pool is exhausted. This proves achievability; excluding other processors needs the next two milestones.
 
-**Dependencies and story role:** Uses M10–M11 and M17. It converts the decomposition into quantitative probabilities used by both proofs.
+**Sources:** [Watrous2018], §§1.1.3, 2.2.2, Theorem 2.22; [pure n-by-one filter and norm](../science/exact_frontier.md).
 
-**Conceptual connection:** A reproducing kernel simultaneously records harmonic dimension, normalization, and overlap of the input orbit. Keeping these roles separate prevents dimension factors from being lost.
-
-**Sources:** [Watrous2018], §§1.1.1 and 7.2.1 for inner products and invariant measure; [normalized kernels](../science/harmonic_analysis.md#4-reproducing-kernels-and-the-normalized-jacobi-polynomial), (H18)–(H23); [orbit weights](../science/harmonic_analysis.md#5-orbit-weights-and-haar-moments), (H24)–(H31).
-
-### M19: The square-root scale in the construction
+### M17: Exactness and polynomial rigidity
 
 **Phase:** Narrative/innovation.
 
-**Central question:** Why does the collective accepted probability become constant with about a square root of the dimension in copies?
+**Central question:** What does a pure exact successful output force on every Kraus amplitude?
 
-**Understanding target:** Exact accepted probability is
+**Understanding target:** Every accepting Kraus vector must lie on the same target ray, because positive outputs cannot cancel outside that ray. Let its vacuum and signal amplitudes be $`A(z,w)`$ and $`B_{ij}(z,w)`$, of bidegree $`(n,m)`$, with $`r(z,w)=\sum_i z_iw_i`$. Homogenizing exactness on unit physical vectors gives $`rB_{ij}=z_iw_jA`$. Rescaling first and then substituting $`z=x+iy,w=x-iy`$ makes this an independent-variable polynomial identity. For $`d\ge2`$, irreducibility of $`r`$ forces $`A=ra`$ with bidegree $`(n-1,m-1)`$.
 
-$$
+**Dependencies and story role:** Uses M04, M06, M11–M12 and M15. It changes an exact output promise into a restriction on every possible accepted map.
+
+**Conceptual connection:** The unit sphere itself is not Zariski dense in independent variables. Homogenization is the step that makes the rigidity argument valid. A zero budget in either pool would require a negative residual bidegree and therefore gives zero exact success.
+
+**Sources:** [Watrous2018], §2.2.2 for Kraus positivity; [polynomial rigidity and zero boundaries](../science/exact_frontier.md).
+
+### M18: Residual optimization and the n-by-one converse
+
+**Phase:** Narrative/innovation.
+
+**Central question:** How does rigidity turn a chosen filter into an optimality theorem?
+
+**Understanding target:** Stacking every residual functional into $`L`$ gives an arbitrary exact accepting Stinespring map $`(I_{\rm out}\otimes L)W`$. With $`X=L^\dagger L\ge0`$, physicality is exactly $`W^\dagger(I_{\rm out}\otimes X)W\le I`$. Haar averaging preserves this feasible set and makes success uniform. At $`m=1`$, the residual representation is irreducible, so its averaged $`X`$ is scalar. The norm from M16 then proves
+```math
+q_d^*(n,1)=\frac{2n}{d+2n-1}.
+```
+
+**Dependencies and story role:** Uses M10, M12 and M16–M17. It completes the arbitrary-processor n-by-one optimum, including multiple Kraus outcomes and discarded environments.
+
+**Conceptual connection:** Covariance is obtained by a lossless optimization reduction; it is not an assumption restricting the original processor.
+
+**Sources:** [Watrous2018], §§2.2.2, 7.1.1, 7.2.1; [exact arbitrary-processor reduction](../science/exact_frontier.md).
+
+### M19: Charged harmonics and normalized orbit weights
+
+**Phase:** Narrative/innovation.
+
+**Central question:** How are unequal copy supplies resolved into quantitative sectors?
+
+**Understanding target:** Assume $`n\ge m`$, put $`r=n-m`$ and $`k=m`$. The input kernel is $`s^rt^k`$, with $`s=\langle\psi,\phi\rangle`$ and $`t=|s|^2`$. It decomposes into multiplicity-free kernels $`s^rQ_j(t)`$, where the normalized Jacobi polynomial has parameters $`(d-2,r)`$ and $`Q_j(1)=1`$. The positive weights $`p_j`$ sum to one. The residual contains precisely sectors $`j=0,\ldots,k-1`$. Rodrigues' formula and its beta integral fix all factorial and dimension factors.
+
+**Dependencies and story role:** Uses M09–M11, M17–M18. It quantifies the exact residual optimization while retaining the phase charge caused by unequal supplies.
+
+**Conceptual connection:** The unequal orbit has a nonzero phase character even though the target is phase invariant. Keeping that character in the residual avoids importing a balanced or unitary-Choi formula.
+
+**Sources:** [Watrous2018], §§7.1.1, 7.2.1 for symmetry and measure; [unequal harmonics and weights](../science/exact_frontier.md); [balanced harmonic derivation](../science/harmonic_analysis.md).
+
+### M20: Gram domination and the all-allocation LP
+
+**Phase:** Narrative/innovation.
+
+**Central question:** Why do scalar inequalities characterize every exact processor?
+
+**Understanding target:** An invariant residual Gram kernel has nonnegative coefficients $`u_0,\ldots,u_{k-1}`$. Multiplication by the target overlap $`(1+t)/2`$ is represented by a tridiagonal matrix $`M`$ from the normalized Jacobi recurrence. Contractivity requires the input Gram kernel to dominate the successful output kernel, giving $`Mu\le p`$. Conversely this domination makes the prescribed map well-defined on every linear combination of orbit vectors, hence a contraction. Thus
+```math
+q_d^*(n,m)=\max\left\{\sum_{j=0}^{k-1}u_j:\ u\ge0,\ Mu\le p\right\}.
+```
+
+**Dependencies and story role:** Uses M05, M11–M12 and M17–M19. It completes the finite exact frontier with both unrestricted necessity and physical sufficiency.
+
+**Conceptual connection:** A positive kernel test must respect all linear dependencies among unknown-state inputs. Its sufficiency proof supplies this missing physical step rather than only a numerical bound.
+
+**Sources:** [Watrous2018], §§1.1.1–1.1.3, 2.2.2, 7.2.1 for foundational tools; [exact LP theorem and proof](../science/exact_frontier.md); [research attribution](../references/RELATED_WORK.md).
+
+### M21: An optimum beyond the inherited residual filter
+
+**Phase:** Narrative/innovation.
+
+**Central question:** What does a small example reveal about exact filter optimization?
+
+**Understanding target:** For $`d=2,n=m=2`$, the LP gives $`q_2^*(2,2)=12/13`$, whereas the inherited top-residual filter succeeds with probability $`1/2`$. On the residual one-pair space, the optimum has $`X=(10/13)P_{\rm singlet}+(14/13)P_{\rm traceless}`$. Although one coefficient exceeds one, the full success effect has eigenvalues $`7/13`$ and $`1`$, with multiplicities five and four. It is therefore contractive.
+
+**Dependencies and story role:** Uses M05, M16 and M19–M20. It connects the abstract optimization to an explicit physical operator and shows why a particular residual projection need not be optimal.
+
+**Conceptual connection:** The constraint belongs to the entire accepted operation, not to each residual coefficient separately. A numerical LP solution is checked against the physical operator; it does not replace the proof of the frontier.
+
+**Sources:** [Watrous2018], §§1.1.3, 2.2.2; [two-by-two example](../science/exact_frontier.md); [verification guide](../verification/README.md).
+
+### M22: Known occupancy flags and the mixed frontier
+
+**Phase:** Narrative/innovation.
+
+**Central question:** Why is extracting pure signals lossless for these mixed sources?
+
+**Understanding target:** Each source is block diagonal in the known vacuum/signal decomposition. Measuring those flags leaves the input unchanged when the outcomes are forgotten. Under hard separate mixed caps $`(A,B)`$, the signal counts are independent $`K\sim\mathrm{Bin}(A,1/2)`$ and $`L\sim\mathrm{Bin}(B,1/2)`$. Exactness of the total accepted pure state forces every positive occupancy-pattern contribution to be exact. Twirling aligns worst-case and average success, so the optimum is exactly
+```math
+Q_d^*(A,B)=\mathbb E[q_d^*(K,L)].
+```
+
+**Dependencies and story role:** Uses M02–M03, M06, M08, M10 and M20. It transfers the exact pure frontier into the actual mixed resource model with both a converse and an attaining count-dependent protocol.
+
+**Conceptual connection:** Pattern positions are accessible classical records independent of the unknown direction. Inaccessible source environments are not being supplied. An additional total cap below $`A+B`$ defines a different task.
+
+**Sources:** [Watrous2018], §§2.2.2, 2.3, 7.2.1; [lossless extraction and binomial theorem](../science/mixed_frontier.md).
+
+### M23: Strong imbalance, source ceilings and complete charging
+
+**Phase:** Narrative/innovation.
+
+**Central question:** Why does a copy product fail to describe every mixed success constraint?
+
+**Understanding target:** Zero pure success when either signal count is zero implies
+```math
+Q_d^*(A,B)\le(1-2^{-A})(1-2^{-B}).
+```
+With one conjugate mixed specimen, the exact frontier is $`\mathbb E[K/(d+2K-1)]`$ and is at most $`1/2`$, regardless of the ordinary supply. A bounded attempt with caps $`(A,B)`$ charges all $`A+B`$ requests, including vacua, surplus and rejected filters. Repeating it at most $`R`$ times charges hard caps $`(RA,RB)`$ and gives success $`1-(1-u)^R`$ if each fresh attempt succeeds with probability $`u`$.
+
+**Dependencies and story role:** Uses M06–M08, M18 and M22. It converts exact extraction into the operational success frontier in the most asymmetric regimes.
+
+**Conceptual connection:** An expected waiting time for signals is not a hard cap. Large ordinary supply cannot remove a nonzero chance that the small conjugate supply contains no signal at all.
+
+**Sources:** [Watrous2018], §§1.2.2, 2.3; [mixed boundaries and fully counted repetition](../science/mixed_frontier.md).
+
+### M24: The inherited balanced square-root construction
+
+**Phase:** Narrative/innovation.
+
+**Central question:** How does the earlier construction establish a total-copy upper bound?
+
+**Understanding target:** For $`N`$ pure copies from each stream, the top residual projector produces exact success
+```math
 q_N=\frac{2N^2}{N^2+d+2N-2}\,p_{N-1}.
-$$
+```
+At $`N=\lceil\sqrt d\rceil`$, its normalization and residual weight are both bounded away from zero. Extracting from $`2N`$ mixed requests per stream gives success at least $`1/(5e)`$ with hard total cost $`4N`$ per attempt. Bounded repetition attains any fixed success below one; preparing the vacuum pair on total failure yields a deterministic fixed-fidelity output.
 
-The first factor reflects physical normalization; the second is the residual weight. For $N=\lceil\sqrt d\rceil$ both are bounded away from zero, giving $q_N\geq4/(5e)$. The limit $p_N\to e^{-c^2}$ when $N/\sqrt d\to c$ explains the same scale quantitatively.
+**Dependencies and story role:** Uses M14–M15, M19 and M22–M23. It retains the established constructive total-copy theorem alongside the sharper finite allocation frontier.
 
-**Dependencies and story role:** Uses M16–M18. It turns the valid pure-input mechanism into a constant-success collective protocol.
+**Conceptual connection:** The inherited construction proves the square-root upper bound without being the optimal exact filter at every finite allocation. Its exact accepted output and approximate deterministic completion have different guarantees.
 
-**Conceptual connection:** Increasing the copy number improves the contraction amplitude while retaining enough residual weight. The prefactor can exceed one; the full product $q_N$ is the accepted probability.
+**Sources:** [Watrous2018], §§1.1.3, 1.2.2, 2.3; [balanced residual filter](../science/construction.md); [total-copy theorem](../science/model.md#the-total-copy-theorem).
 
-**Sources:** [Watrous2018], §§1.1.3 and 1.2.2 for norm and probability foundations; [Exact success probability](../science/construction.md#exact-success-probability); [uniform square-root bound](../science/construction.md#a-uniform-bound-at-the-square-root-scale); [orbit-weight asymptotics](../science/harmonic_analysis.md#5-orbit-weights-and-haar-moments), (H27)–(H29).
-
-### M20: From mixed specimens to a hard-budget upper bound
-
-**Phase:** Narrative/innovation.
-
-**Central question:** How does the pure-input construction yield the claimed cost for the actual mixed sources?
-
-**Understanding target:** A known vacuum/signal measurement extracts a pure signal specimen with probability $1/2$ without learning its direction. Requesting $2N$ mixed specimens from each stream yields enough signals for one attempt with sufficient probability to guarantee overall success at least $1/(5e)$. Bounded repetition uses a hard maximum of $4Nr$ specimens. On total failure, outputting the vacuum pair gives the stated deterministic fidelity.
-
-**Dependencies and story role:** Uses M06–M08 and M19. It completes the upper bound in the original resource model, including failed extractions and attempts.
-
-**Conceptual connection:** A repeat-until-success intuition becomes a hard-budget theorem only after fixing the number of attempts and specifying the final failure behavior.
-
-**Sources:** [Watrous2018], §§1.2.2 and 2.3.1–2.3.2; [Extracting pure specimens](../science/construction.md#extracting-pure-specimens-from-the-mixed-sources); [Bounded repetition and deterministic output](../science/construction.md#bounded-repetition-and-deterministic-output); [explicit theorem constants](../science/model.md#the-total-copy-theorem).
-
-### M21: The normalized multiplication lemma
+### M25: The inherited robust coherence inequality
 
 **Phase:** Narrative/innovation.
 
-**Central question:** What fraction of a highest-degree amplitude can remain available after multiplication by the signal-pair vector?
+**Central question:** What survives when successful output need only be approximately correct?
 
-**Understanding target:** Multiplication by $\chi(\psi)=\psi\otimes\psi^*$ is an $L^2$ isometry but can raise harmonic degree from $N$ to $N+1$. For every degree-$N$ function, the squared norm retained in degrees at most $N$ is exactly the fraction
+**Understanding target:** An arbitrary Stinespring contraction has vacuum and signal amplitudes of bounded harmonic degree. In the balanced input, the lower-degree vacuum weight is at most $`\delta_N=1-p_N`$. Multiplication by the signal-pair vector shifts part of the top degree outside the available range; the retained fraction is $`\lambda_N`$. For Haar-average success $`p`$ and unnormalized target overlap $`f`$,
+```math
+f\le\left(\frac12+\frac{\sqrt{\lambda_N}}2\right)p+\sqrt{\delta_Np}.
+```
+This bound permits approximate and mixed accepted outputs.
 
-$$
-\lambda_N
-=1-\frac{(N+d-1)^2}{(2N+d-1)(2N+d)}.
-$$
+**Dependencies and story role:** Uses M07, M10–M12, M19 and M24. It preserves the robust converse that exact polynomial rigidity alone cannot supply.
 
-Irreducibility makes the relevant compressed operator scalar; its trace, the addition kernel, and a ratio of leading coefficients determine that scalar. The identity extends componentwise to environment-valued functions.
+**Conceptual connection:** Exactness enables the finite LP; approximate output requires a different argument controlling available coherence. The two theorems must not be interchanged by setting an informal error parameter to zero.
 
-**Dependencies and story role:** Uses M11–M12 and M17–M18. It supplies the main quantitative obstruction to coherent output assembly.
+**Sources:** [Watrous2018], §§1.1.1, 2.2.2, 3.2, 7.2.1; [multiplication leakage](../science/harmonic_analysis.md#6-exact-multiplication-leakage); [finite robust converse](../science/converse.md#2-finite-copy-theorem).
 
-**Conceptual connection:** An isometry can preserve total norm while transferring most of it into a degree unavailable to the other output amplitude. The unavailable component, rather than norm loss, drives the converse.
-
-**Sources:** [Watrous2018], §§1.1.1–1.1.3 and 7.2.1 for the underlying norm and averaging tools; [Exact multiplication leakage](../science/harmonic_analysis.md#6-exact-multiplication-leakage), (H32)–(H37); [vector-valued extension](../science/harmonic_analysis.md#7-vector-valued-amplitudes-and-arbitrary-linear-processors), (H38).
-
-### M22: Harmonic bounds for an arbitrary successful processor
+### M26: Adaptive simulation and the matching total-copy law
 
 **Phase:** Narrative/innovation.
 
-**Central question:** Why do the harmonic identities constrain a processor that has no imposed symmetry?
+**Central question:** How does a pure-input lower bound cover adaptive mixed-source access?
 
-**Understanding target:** An arbitrary Stinespring contraction produces vacuum, signal, and irrelevant output sectors with environment-valued amplitudes. Every amplitude is a fixed linear image of $v_N(\psi)$ and hence has harmonic degree at most $N$. The lower-degree vacuum amplitude has average squared norm at most $\delta_N=1-p_N$, because applying a contraction cannot enlarge the corresponding input weight. This identification respects complex conjugation in the tensor-to-function map.
+**Understanding target:** A hard total mixed budget $`T`$ can be simulated with the stronger resource of $`T`$ pure specimens from each stream. Each requested pure specimen is randomly replaced by the vacuum with probability $`1/2`$, hiding that decision from the simulated processor. No branch runs out of either supply. Applying M25 with $`N=T`$ shows that fixed fidelity above $`1/2`$ at fixed positive success needs $`T=\Omega(\sqrt d)`$. Together with M24, this gives the inherited $`\Theta(\sqrt d)`$ total-copy theorem.
 
-**Dependencies and story role:** Uses M12, M17–M18, and M21. It transfers orbit identities into a restriction on every accepted operation.
+**Dependencies and story role:** Uses M08, M12 and M24–M25. It joins the constructive and unrestricted sides of the robust theorem while covering adaptive source order.
 
-**Conceptual connection:** The proof uses symmetry to analyze the supplied family, while retaining arbitrary processors, environments, and accepted measurement records.
+**Conceptual connection:** Padding grants the simulator more resources. It proves a lower bound on the total budget and does not require an individual square-root lower bound on each stream.
 
-**Sources:** [Watrous2018], §2.2.2, Theorem 2.22; [arbitrary linear amplitudes](../science/harmonic_analysis.md#7-vector-valued-amplitudes-and-arbitrary-linear-processors), (H39)–(H40); [Stinespring decomposition](../science/converse.md#3-stinespring-form-of-an-unrestricted-success-branch), (C9)–(C11); [available lower-degree amplitude](../science/converse.md#4-the-available-lower-degree-amplitude), (C12)–(C13).
+**Sources:** [Watrous2018], §2.2.2 for channel simulation; [adaptive stronger-input reduction](../science/converse.md#6-from-independent-mixed-samples-to-the-stronger-pure-input); [constant-error consequences](../science/converse.md#7-constant-error-consequences-and-the-fidelity-threshold).
 
-### M23: Coherence and the finite-copy inequality
-
-**Phase:** Narrative/innovation.
-
-**Central question:** How do unavailable harmonic components limit fidelity above the vacuum baseline?
-
-**Understanding target:** The target overlap consists of diagonal contributions bounded by half the success probability, plus coherence between vacuum and signal amplitudes. Cauchy–Schwarz bounds the lower-degree contribution through $\delta_N$ and the highest-degree contribution through $\lambda_N$. For average success $p$ and average unnormalized overlap $f$, this yields
-
-$$
-f\leq\left(\frac12+\frac{\sqrt{\lambda_N}}2\right)p
-+\sqrt{\delta_Np}.
-$$
-
-It applies to approximate and mixed accepted outputs as well as exact ones.
-
-**Dependencies and story role:** Uses M07, M10, and M21–M22. It completes the robust pure-input converse in a finite form before taking an asymptotic limit.
-
-**Conceptual connection:** High conditional fidelity can be traded against acceptance probability, but at fixed positive success neither a small lower-degree weight nor the inaccessible highest-degree component can be ignored.
-
-**Sources:** [Watrous2018], §§1.1.1 and 3.2.1; [Finite-copy theorem](../science/converse.md#2-finite-copy-theorem), (C5)–(C8); [coherence bound](../science/converse.md#5-bounding-the-coherence-required-by-the-target), (C14)–(C17).
-
-### M24: Adaptive samples and the stronger pure-input reduction
+### M27: Exact frontiers, approximate theorems and the product conjecture
 
 **Phase:** Narrative/innovation.
 
-**Central question:** Why does the balanced pure-input bound constrain every strategy with a hard total mixed-copy budget?
+**Central question:** Which claims can be concluded from the different converses?
 
-**Understanding target:** A known channel can turn one pure signal specimen into the required vacuum/signal mixture. Supplying a simulator with $T$ pure specimens of each conjugate type therefore covers every branch of a protocol requesting at most $T$ mixed specimens in total. Registers can be prepared in advance and selected adaptively; all subsequent coherent processing belongs to one accepted completely positive map. The bound from M23 applies with $N=T$.
+**Understanding target:** The exact LP covers every finite pure allocation; the binomial transform covers the stated separate mixed caps. A useful task-specific exact converse is $`q_d^*(n,m)\le\min\{1,2nm/(d+\max(n,m)-1)\}`$. The robust total-copy theorem covers approximate outputs under a total cap. None of these statements is being relabeled as a fixed-approximate-fidelity product law. The simplified interpretation that $`nm`$ of order $`d`$ captures an allocation threshold remains a conjecture here, with its performance regime to be specified.
 
-**Dependencies and story role:** Uses M08, M12–M13, and M23. It moves the converse from an analytically convenient stronger resource to the original sample model.
+**Dependencies and story role:** Uses M20, M22–M23 and M25–M26. It integrates the theorem quantifiers before comparisons with different source resources.
 
-**Conceptual connection:** Giving a lower-bound simulator extra specimens strengthens the input resource and preserves the implication. This proves a bound on the total budget, without proving a separate lower bound for each stream.
+**Conceptual connection:** A complete finite optimization can be established while a simple asymptotic description remains unproved. Strongly unequal mixed budgets also retain occupancy ceilings that a product alone would omit.
 
-**Sources:** [Watrous2018], §§2.2.1–2.2.2 and 2.3; [stronger-input simulation](../science/model.md#why-balanced-pure-inputs-suffice-for-the-lower-bound); [adaptive reduction](../science/converse.md#6-from-independent-mixed-samples-to-the-stronger-pure-input), (C18) and Corollary 2.
+**Sources:** [Watrous2018], §§2.2.2, 3.2 for operation and fidelity distinctions; [exact bounds and limits](../science/exact_frontier.md); [mixed frontier limits](../science/mixed_frontier.md); [robust model](../science/model.md).
 
-### M25: The matching total-copy law
-
-**Phase:** Narrative/innovation.
-
-**Central question:** Which guarantees have matching upper and lower copy bounds?
-
-**Understanding target:** For fixed success threshold $p_{\min}\in(0,1)$ and conditional squared-fidelity threshold $F_0\in(1/2,1]$, the finite converse excludes total budgets below a constant multiple of $\sqrt d$. The construction achieves $O(\sqrt d)$ total cost with exact accepted output and any fixed success below one. A failure fallback also gives the matching deterministic law for fixed $1/2<F_0<1$. Thus both stated costs are $\Theta(\sqrt d)$.
-
-**Dependencies and story role:** Combines M19–M20 with M23–M24. It integrates the two proof directions into the main theorem before comparing access models.
-
-**Conceptual connection:** The guarantee is a fixed improvement above a free baseline. The constants may depend on performance thresholds; the statement neither requires each stream separately to be costly nor asserts exact probability-one preparation.
-
-**Sources:** [Watrous2018], §§2.3 and 3.2 for performance foundations; [The total-copy theorem](../science/model.md#the-total-copy-theorem); [Constant-error consequences and the fidelity threshold](../science/converse.md#7-constant-error-consequences-and-the-fidelity-threshold), (C19)–(C21).
-
-### M26: Bell contraction of a matched purification pair
+### M28: Matched conjugate environments and Bell contraction
 
 **Phase:** Narrative/innovation.
 
-**Central question:** What changes when the source supplies a purification and its exact complex conjugate?
+**Central question:** What extra correlation permits a constant-cost source comparison?
 
-**Understanding target:** For a purification with a known $k$-dimensional environment and its matched conjugate, projecting the two environments onto the normalized Bell vector leaves $\operatorname{vec}(\rho)/\sqrt k$. The success probability is $\operatorname{Tr}(\rho^2)/k$. For the project's flat rank-two state this is the desired canonical target on success, with probability $1/(2k)$; a two-dimensional environment gives $1/4$.
+**Understanding target:** A purification paired with its exactly matched conjugate retains accessible environment registers with correlated gauge choices. Bell contraction on a known two-dimensional environment converts one preparation from each source into the flat rank-two canonical target with probability $`1/4`$, independently of that common unknown gauge. Independently randomized purification gauges do not supply this matching. For a general spectrum the accepted vector is proportional to $`\mathrm{vec}(\rho)`$, rather than generally to $`\mathrm{vec}(\sqrt\rho)`$; larger environment dimension changes the probability.
 
-**Dependencies and story role:** Uses M03–M08, M14, and M25. It introduces the operational comparator after establishing the cost of independent samples.
+**Dependencies and story role:** Uses M03–M04, M08 and M26–M27. It preserves the access comparison with its exact spectrum, environment and gauge assumptions.
 
-**Conceptual connection:** Access to matched source environments permits the required correlation to be assembled from a constant number of supplied purification pairs when their environmental dimension is bounded independently of $d$.
+**Conceptual connection:** The environments are physical supplied resources in this comparator. They cannot be inserted into a samples-only processor because they exist in a mathematical dilation.
 
-**Sources:** [Watrous2018], §§1.1.2, 2.1.3, and 2.3.1; [Bell contraction of a matched pair](../science/access_comparison.md#bell-contraction-of-a-matched-pair).
+**Sources:** [Watrous2018], §§2.1.3, 2.2.2, 3.2; [matched Bell contraction and general-spectrum limits](../science/access_comparison.md).
 
-### M27: Gauge matching and ordinary random purification
-
-**Phase:** Narrative/innovation.
-
-**Central question:** Which relation between purifying environments is essential to the Bell protocol?
-
-**Understanding target:** Applying an unknown unitary gauge to one purification is harmless when the other receives its complex conjugate: the matching transformations cancel in the Bell contraction. Independent gauge choices do not have this cancellation. Ordinary random-purification constructions can supply a consistent gauge within an identical-copy stream; that does not supply the required conjugate correlation between two separately processed streams. Failure of an independently gauged Bell attempt alone is not a general impossibility proof.
-
-**Dependencies and story role:** Uses M04, M08, M24, and M26. It identifies the extra resource that makes the comparison meaningful.
-
-**Conceptual connection:** An unknown but matched reference can be useful without being learned. The quantitative obstruction for independent samples is supplied by the arbitrary-processor converse, not by a single unsuccessful protocol.
-
-**Sources:** [Watrous2018], §§2.1.3 and 7.2.1; [gauge cancellation and counterexamples](../science/access_comparison.md#gauge-independence-requires-a-matched-pair); [ordinary random purification](../science/access_comparison.md#what-ordinary-random-purification-supplies); [related source-access results](../references/RELATED_WORK.md#random-purification-and-source-access).
-
-### M28: Spectrum and environmental-dimension limits
+### M29: Shared contraction methods and the composition boundary
 
 **Phase:** Narrative/innovation.
 
-**Central question:** Which promises make the matched-pair protocol an exact, constant-success comparison?
+**Central question:** What can the sister relationship explain without transferring a theorem?
 
-**Understanding target:** Bell contraction produces a vector proportional to $\operatorname{vec}(\rho)$, whereas canonical purification uses $\operatorname{vec}(\sqrt\rho)$. These normalized vectors agree for a flat nonzero spectrum. Its probability also contains the inverse environmental dimension, so an arbitrarily large unknown environment does not inherit the constant-success guarantee. Compressing that environment would require an additional operation and its own resource analysis.
+**Understanding target:** Quantum program composition and canonical purification both contract separately symmetric copy pools and require whole-space physical normalization. The unitary-Choi task instead supplies accessible program halves with maximally mixed inner marginals, and its polar-normalized successful output is generally approximate. The rank-one conjugate orbit and exact canonical coherence here require their own rigidity and success accounting. Replacing a dimension factor in the unitary theorem would not prove the present LP or mixed frontier.
 
-**Dependencies and story role:** Uses M04, M07, and M26–M27. It fixes the domain of the access comparison before its broader interpretation.
+**Dependencies and story role:** Uses M05, M08, M15, M20 and M27–M28. It connects the common mechanism to its distinct operational consequences and credits inherited transformation tools.
 
-**Conceptual connection:** The spectrum controls the accepted target and the environment size controls success. Neither promise follows merely from saying that a compatible purification is available.
+**Conceptual connection:** The relationship is a shared method with a checked boundary, not a black-box reduction between incompatible promises. Classical decision outputs, gate-efficient synthesis and repeated use also require their own arguments.
 
-**Sources:** [Watrous2018], §§1.1.3, 2.1.3, and 3.2.1; [Bell success normalization](../science/access_comparison.md#bell-contraction-of-a-matched-pair); [General-spectrum identity and limits](../science/access_comparison.md#general-spectrum-identity-and-limits-of-the-comparison).
+**Sources:** [Watrous2018], §§2.2.2, 7.1.1; [scientific relationship and attribution](../references/RELATED_WORK.md); [sister model](https://github.com/GoGoKo699/Quantum-Program-Composition/blob/a5a49a020ef9cf29a7beffd0d3129f09d76b712d/science/model.md).
 
-### M29: What the access comparison establishes
-
-**Phase:** Narrative/innovation.
-
-**Central question:** How should the copy theorem and its comparator be situated among purification and query results?
-
-**Understanding target:** The separation concerns producing a specified quantum output from independent samples versus a matched conjugate-purification resource. It does not automatically yield a separation for classical decision problems, where verification of an unknown target is a separate issue. A forward preparation operation and its conjugate suffice for the Bell protocol; they are additional access assumptions. The copy theorem gives information-theoretic operations without a gate-efficiency guarantee.
-
-**Dependencies and story role:** Uses M08, M25, and M26–M28. It connects the result to earlier purification, superposition, and source-simulation questions while retaining their different resource and output requirements.
-
-**Conceptual connection:** Comparisons are meaningful only after aligning the supplied resources, required output, error criterion, and computational cost. Matching one of these features does not align all four.
-
-**Sources:** [Watrous2018], §§2.2.2 and 3.1 for operations and classical state-discrimination outputs; [Preparation-oracle interpretation and scope](../science/access_comparison.md#preparation-oracle-interpretation-and-scope); [Related work and attribution](../references/RELATED_WORK.md).
-
-### M30: Synthesis of the mechanism, converse, and resource distinction
+### M30: Synthesis of exact assembly, hard budgets and access
 
 **Phase:** Narrative/innovation.
 
-**Central question:** What is the complete explanation of the square-root copy cost and the matched-purification advantage?
+**Central question:** What is the complete current account of canonical-purification cost?
 
-**Understanding target:** The collective filter produces the required coherence with a valid whole-space normalization and enough residual harmonic weight at the square-root scale. Below that scale, arbitrary accepted processors have too little lower-degree weight and too little retained highest-degree overlap to exceed the vacuum baseline by a fixed amount at constant success. Balanced pure-input simulation turns this into a hard total-copy bound. Matched conjugate environments provide a different resource whose Bell contraction bypasses that sample requirement under the stated spectrum and dimension promises.
+**Understanding target:** The coherent contraction/extraction mechanism gives physical exact filters. Exact-output rigidity identifies every allowed residual dependence, and positive Gram domination gives an attained all-allocation LP. Known orthogonal occupancy flags convert it losslessly into the hard mixed-budget frontier, retaining source scarcity and all failed consumption. The inherited robust harmonic converse and balanced construction separately establish the fixed-performance total-copy law. Matched conjugate environments describe a different, explicitly supplied resource; the program-composition comparison explains common machinery and its transfer boundary.
 
-**Dependencies and story role:** Integrates M14–M29, especially the complete theorem in M25 and the access boundaries in M27–M29. It completes the narrative phase and the common map.
+**Dependencies and story role:** Integrates M14–M29 and completes the narrative phase. It joins the exact finite frontier, the robust asymptotic theorem and the access comparisons without changing any promise.
 
-**Conceptual connection:** The result quantifies coherent assembly after both conjugate marginal states are already supplied. Its significance lies in the matching constructive and unrestricted lower bounds, together with a precise account of what additional source correlation changes the cost.
+**Conceptual connection:** The scientific contribution measures the coherent assembly still needed after both conjugate marginals are supplied. Its scope is fixed by the source registers, exactness, success and budget quantifiers; the remaining product conjecture and implementation questions stay separate.
 
-**Sources:** [Watrous2018], §§2.1.3, 2.2.2, 3.2, and 7.2.1 as the shared foundations; [main theorem](../science/model.md#the-total-copy-theorem); [construction conclusion](../science/construction.md#what-the-construction-establishes); [converse conclusion](../science/converse.md#7-constant-error-consequences-and-the-fidelity-threshold); [access comparison](../science/access_comparison.md); [scientific attribution](../references/RELATED_WORK.md).
+**Sources:** [Watrous2018], §§2.1.3, 2.2.2, 3.2, 7.1.1, 7.2.1; [scientific guide](../science/README.md); [exact pure frontier](../science/exact_frontier.md); [mixed frontier](../science/mixed_frontier.md); [total-copy theorem](../science/model.md); [access comparison](../science/access_comparison.md); [verification](../verification/README.md).
 
 [Watrous2018]: https://jhwatrous.github.io/TQI.pdf
