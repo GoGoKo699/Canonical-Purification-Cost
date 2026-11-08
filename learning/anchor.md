@@ -215,11 +215,7 @@ The textbook supplies the language for states, physical maps, error and symmetry
 4. **Resolve unequal supplies quantitatively.** For $`n\ge m`$, the residual has $`m`$ irreducible harmonic sectors with phase charge $`n-m`$. The [pure-frontier page](../science/exact_frontier.md) derives their normalized Jacobi kernels and exact orbit weights, including the Rodrigues beta integral. These are locally supplied mathematical steps, rather than a claim that the textbook states the new allocation theorem.
 5. **Turn kernel bounds into an operation.** A positive residual kernel has nonnegative coefficients $`u_j`$. Multiplication by the target overlap $`(1+t)/2`$ gives the matrix $`M`$ of the exact LP. Gram domination is equivalent to $`Mu\le p`$, and its sufficiency proof checks every linear dependence among orbit vectors before defining a physical contraction. This makes the LP an attained frontier, rather than only a converse.
 6. **Count the actual mixed source.** The [mixed-frontier proof](../science/mixed_frontier.md) measures known vacuum/signal blocks without disturbance. Positivity forces exactness separately in every pattern, while conditioning on its signal counts attains the pure optimum. Thus
-   ```math
-   Q_d^*(A,B)=\mathbb E[q_d^*(K,L)],
-   \quad K\sim\mathrm{Bin}(A,1/2),\quad L\sim\mathrm{Bin}(B,1/2),
-   ```
-   with independent counts. This identity includes all requests, zero-signal events and rejected filters. Bounded repetition charges new hard caps instead of an unbounded expected waiting time.
+   $`Q_d^*(A,B)=\mathbb E[q_d^*(K,L)]`$, with independent $`K\sim\mathrm{Bin}(A,1/2)`$ and $`L\sim\mathrm{Bin}(B,1/2)`$ counts. This identity includes all requests, zero-signal events and rejected filters. Bounded repetition charges new hard caps instead of an unbounded expected waiting time.
 
 ### Robust total-copy cost and the access comparison
 
