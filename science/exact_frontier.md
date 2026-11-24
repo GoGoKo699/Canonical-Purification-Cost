@@ -4,6 +4,8 @@
 
 The exact target imposes more structure than an approximate fidelity requirement. Every successful amplitude must factor into the same canonical target and an inaccessible residual vector. This factorization determines the full pure-copy frontier, including highly unequal allocations, as an attained finite linear program.
 
+If the residual copies must be returned in their original joint pure state, the [joint-return theorem](exact_joint_return.md) gives a closed-form optimum. With two qubit specimens per pool the return requirement yields success $`4/5`$, compared with the target-only optimum $`12/13`$ derived below.
+
 ## Task and theorem
 
 Fix $`d\ge2`$, $`V=\mathbb C^d`$ and the known vacuum from the [model](model.md). Supply

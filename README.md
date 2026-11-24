@@ -21,6 +21,8 @@ Independent copies of $`\rho_\psi`$ and $`\rho_\psi^*`$ require and suffice with
 | Independent mixed samples, fixed error and success | Optimal hard total copy cost $`\Theta(\sqrt d)`$ |
 | $`n`$ pure state copies and one conjugate copy, exact heralding | Sharp optimum $`q_d^*(n,1)=2n/(d+2n-1)`$ |
 | Arbitrary pure hard allocation $`(n,m)`$, exact heralding | Attained finite LP with $`\min(n,m)`$ variables |
+| Pure supplies with exact return of all unused specimens | Sharp heralded success $`2M/(d+2M-1)`$, with $`M=\max(n,m)`$ |
+| Pure supplies with deterministic approximate joint return | Global squared fidelity at least $`nm/[nm+(d-1)/4]`$ |
 | Mixed hard separate caps $`(A,B)`$, exact heralding | Exact binomial average $`Q_d^*(A,B)=\mathbb E[q_d^*(K,L)]`$ |
 | Matched purification/conjugate pair with environment dimension two | Two source preparations give the exact target with probability $`1/4`$ |
 
@@ -30,11 +32,11 @@ The comparison shows what is lost when the purifying registers are discarded. Bo
 
 The [exact unequal-budget frontier](science/exact_frontier.md) uses polynomial rigidity and charged harmonic kernels to cover arbitrary processors. It gives $`q_2^*(2,2)=12/13`$, improving the simple balanced residual-projection filter's $`1/2`$ success at that allocation. The [mixed-source frontier](science/mixed_frontier.md) counts every requested specimen, with independent signal counts $`K\sim\mathrm{Bin}(A,1/2)`$ and $`L\sim\mathrm{Bin}(B,1/2)`$. One conjugate mixed specimen imposes success at most $`1/2`$, however large the other supply.
 
-These exact statements concern separate hard caps with total maximum $`A+B`$. They do not characterize a stricter simultaneous total cap. The broad $`nm`$-of-order-$`d`$ interpretation remains conjectural here; no fixed-approximate-fidelity product law is inferred.
+The mixed frontier concerns separate hard caps with total maximum $`A+B`$. The [pure joint-return results](science/exact_joint_return.md) quantify the effect of preserving the unused specimens. Exact return requires order $`d`$ total pure specimens for fixed positive success. Deterministic approximate joint return is possible with balanced supplies of order $`\sqrt d`$ at fixed fidelity. The optimal approximate allocation law remains open.
 
 ## Sister relationship
 
-[Quantum-Program-Composition](https://github.com/GoGoKo699/Quantum-Program-Composition) shares the method of coherent contraction across symmetric copy pools followed by whole-space physical normalization. This repository owns the exact canonical-purification rigidity, allocation LP and mixed-source frontier. The [composition-side boundary account](https://github.com/GoGoKo699/Quantum-Program-Composition/blob/main/science/canonical_purification_boundary.md) explains why its unitary-Choi theorem and generally approximate successful polar output do not transfer to this target. The relationship supplies a common method and a precise operational boundary, rather than a substitution of $`d`$ for $`d^2`$.
+[Quantum Program Composition](https://github.com/GoGoKo699/Quantum-Program-Composition/blob/main/science/exact_joint_return.md) and [Quantum Multicopy Teleportation](https://github.com/GoGoKo699/Quantum-Multicopy-Teleportation/blob/main/science/exact-return.md) share the same symmetric contraction norm. Their exact-return success is $`1/(d\lambda)`$, where $`\lambda=(d+M-1)/M`$. The extra signal extraction branch in canonical purification gives $`2/(1+\lambda)`$. Program composition also supplies the polar normalization method used to derive the approximate purification construction.
 
 ## Read the science
 
@@ -44,6 +46,7 @@ Start with the [model and theorem](science/model.md). The [science guide](scienc
 |---|---|
 | What is supplied, produced and counted? | [Operational model](science/model.md) |
 | What is the exact optimum for each unequal pure allocation? | [Exact frontier and arbitrary-processor converse](science/exact_frontier.md) |
+| How does preserving spare pure specimens change the task? | [Exact and approximate joint return](science/exact_joint_return.md) |
 | How do hard mixed-source caps enter the exact frontier? | [Lossless extraction and binomial frontier](science/mixed_frontier.md) |
 | How does the protocol reach the square-root scale? | [Exact construction and finite copy budget](science/construction.md) |
 | Which symmetry identities control the bound? | [Projective harmonics](science/harmonic_analysis.md) |

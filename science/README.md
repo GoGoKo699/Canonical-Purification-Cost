@@ -8,6 +8,8 @@ The [pure exact frontier](exact_frontier.md) starts from the full-space n-by-one
 
 The [mixed-source frontier](mixed_frontier.md) proves that measuring known occupancy flags is lossless. It determines the exact hard-cap optimum by averaging the pure LP over independent binomial signal counts, including zero-signal sectors. It also explains why a fixed rare mixed pool creates an extraction ceiling and counts every failure in bounded repetitions.
 
+The [pure joint-return frontier](exact_joint_return.md) adds the unused specimens to the target. Exact return fixes the success map up to scalar normalization and raises the fixed-success total pure-copy cost to order $`d`$. Polar normalization gives deterministic approximate joint return with balanced supplies of order $`\sqrt d`$ and links the result to program composition and multicopy teleportation.
+
 ## Total-copy and access-comparison route
 
 1. [Model and theorem](model.md) fixes the promised state family, target, squared-fidelity convention, success instrument and hard total-copy budget. It separates the exact per-stream frontier from the approximate total-copy theorem and states the source promises.

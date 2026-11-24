@@ -440,19 +440,19 @@ This bound permits approximate and mixed accepted outputs.
 
 **Sources:** [Watrous2018], §§2.1.3, 2.2.2, 3.2; [matched Bell contraction and general-spectrum limits](../science/access_comparison.md).
 
-### M29: Shared contraction methods and the composition boundary
+### M29: Exact and approximate return of pure specimens
 
 **Phase:** Narrative/innovation.
 
-**Central question:** What can the sister relationship explain without transferring a theorem?
+**Central question:** How does including unused specimens in the target change the cost?
 
-**Understanding target:** Quantum program composition and canonical purification both contract separately symmetric copy pools and require whole-space physical normalization. The unitary-Choi task instead supplies accessible program halves with maximally mixed inner marginals, and its polar-normalized successful output is generally approximate. The rank-one conjugate orbit and exact canonical coherence here require their own rigidity and success accounting. Replacing a dimension factor in the unitary theorem would not prove the present LP or mixed frontier.
+**Understanding target:** Exact joint return forces every accepting Kraus map to be a scalar multiple of $`W`$. The occupation norm sets its optimal success to $`2M/(d+2M-1)`$, with $`M=\max(n,m)`$. Check that two specimens per pool at $`d=2`$ give $`4/5`$, compared with $`12/13`$ when residual systems can be altered. The polar isometry provides a deterministic joint squared fidelity of at least $`nm/[nm+(d-1)/4]`$.
 
-**Dependencies and story role:** Uses M05, M08, M15, M20 and M27–M28. It connects the common mechanism to its distinct operational consequences and credits inherited transformation tools.
+**Dependencies and story role:** Uses M05, M07, M15, M17 and M21. It connects exactness, whole-space contractivity and fidelity on the same joint target.
 
-**Conceptual connection:** The relationship is a shared method with a checked boundary, not a black-box reduction between incompatible promises. Classical decision outputs, gate-efficient synthesis and repeated use also require their own arguments.
+**Conceptual connection:** Scalar normalization leaves the joint target exact. Polar normalization changes the state in exchange for deterministic joint approximation. The same symmetric contraction norm appears in exact program composition and exact Bell return.
 
-**Sources:** [Watrous2018], §§2.2.2, 7.1.1; [scientific relationship and attribution](../references/RELATED_WORK.md); [sister model](https://github.com/GoGoKo699/Quantum-Program-Composition/blob/a5a49a020ef9cf29a7beffd0d3129f09d76b712d/science/model.md).
+**Sources:** [Watrous2018], §§2.2.2, 3.2, 6.3.1, 7.1.1. [Pure joint return](../science/exact_joint_return.md) · [Program composition](https://github.com/GoGoKo699/Quantum-Program-Composition/blob/main/science/exact_joint_return.md) · [Multicopy teleportation](https://github.com/GoGoKo699/Quantum-Multicopy-Teleportation/blob/main/science/exact-return.md).
 
 ### M30: Synthesis of exact assembly, hard budgets and access
 
@@ -460,7 +460,7 @@ This bound permits approximate and mixed accepted outputs.
 
 **Central question:** What is the complete current account of canonical-purification cost?
 
-**Understanding target:** The coherent contraction/extraction mechanism gives physical exact filters. Exact-output rigidity identifies every allowed residual dependence, and positive Gram domination gives an attained all-allocation LP. Known orthogonal occupancy flags convert it losslessly into the hard mixed-budget frontier, retaining source scarcity and all failed consumption. The inherited robust harmonic converse and balanced construction separately establish the fixed-performance total-copy law. Matched conjugate environments describe a different, explicitly supplied resource; the program-composition comparison explains common machinery and its transfer boundary.
+**Understanding target:** The coherent contraction/extraction mechanism gives physical exact filters. Exact-output rigidity identifies every allowed residual dependence, and positive Gram domination gives an attained all-allocation LP. Known orthogonal occupancy flags convert it losslessly into the hard mixed-budget frontier, retaining source scarcity and all failed consumption. The inherited robust harmonic converse and balanced construction separately establish the fixed-performance total-copy law. Exact joint return costs order $`d`$ at fixed success. Polar normalization attains fixed joint fidelity at order $`\sqrt d`$ with balanced pure supplies. Matched conjugate environments are a separate physical resource.
 
 **Dependencies and story role:** Integrates M14–M29 and completes the narrative phase. It joins the exact finite frontier, the robust asymptotic theorem and the access comparisons without changing any promise.
 
