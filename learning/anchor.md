@@ -225,11 +225,13 @@ The inherited [converse](../science/converse.md) permits approximate successful 
 
 The [access comparison](../science/access_comparison.md) separately assumes physically supplied matched conjugate purifications. Its flat spectrum, known environment dimension and matched gauge enable exact Bell contraction. These assumptions cannot be supplied by merely writing a Stinespring dilation of an independent mixed-state source.
 
-### The sister relationship and its boundary
+### Exact and approximate joint return
 
-[Quantum-Program-Composition](https://github.com/GoGoKo699/Quantum-Program-Composition) also contracts separately symmetric copy pools and checks physical normalization on the whole input space. Its theorem supplies full unitary Choi programs with accessible halves and maximally mixed inner marginals. Its polar-normalized successful state is generally approximate. Those promises do not apply to the rank-one signal orbit and exact canonical coherence here.
+The [pure joint-return proof](../science/exact_joint_return.md) includes all unused pure specimens in the target. The rank-one Kraus condition from Watrous §2.2.2 now constrains every returned register. In homogeneous coordinates the joint target and the accepted amplitudes have the same bidegree. Their coordinate ratios force each successful map to be a constant multiple of the contraction and extraction map $`W`$. The occupation norm on the symmetric spaces of §7.1.1 determines how much that map can be scaled. For two specimens per stream in signal dimension two, exact return gives success $`4/5`$, while the target-only optimum is $`12/13`$.
 
-The shared method therefore motivates a comparison, not a theorem transfer obtained by replacing a dimension factor. The exact LP and binomial frontier are proved for the canonical model itself. The simplified interpretation that $`nm`$ of order $`d`$ describes a product threshold remains conjectural here; no fixed-approximate-fidelity product law or gate-efficient optimal-filter synthesis is claimed.
+For approximate joint return, use the polar isometry of $`W`$ and Watrous §3.2 to evaluate squared fidelity with the full product. The proof computes the first two moments of $`W^\dagger W`$ on the promised input and bounds the overlap by Hölder's inequality. The sufficient allocation scales with $`nm`$, and the optimal approximate allocation law remains open.
+
+[Quantum Program Composition](https://github.com/GoGoKo699/Quantum-Program-Composition/blob/main/science/exact_joint_return.md) supplies the polar method and a parallel exact-return optimum for unitary Choi specimens. [Quantum Multicopy Teleportation](https://github.com/GoGoKo699/Quantum-Multicopy-Teleportation/blob/main/science/exact-return.md) evaluates the same norm on an ordered port space and proves a local exact-return theorem. Watrous §6.3.1 supplies the Bell-teleportation foundation for the comparison.
 
 The [related-work account](../references/RELATED_WORK.md) credits the inherited coherent constructions and general stochastic kernel-transformation framework. These primary references support the research; Watrous remains the sole educational anchor.
 

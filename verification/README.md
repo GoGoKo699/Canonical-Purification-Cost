@@ -67,6 +67,16 @@ The mixed option interprets n and m as separate mixed-source request caps. Its f
 
 The analytic rigidity, kernel-positivity and occupancy proofs establish the all-dimensional arbitrary-processor theorem. These finite calculations test normalization, coefficients, physical realization and counting. They do not certify gate-efficient implementation, literature priority, a closed elementary optimum, the broad $`nm`$-of-order-$`d`$ conjecture or an approximate-fidelity product law.
 
+## Joint-return checks
+
+From the repository root, run:
+
+```sh
+OPENBLAS_NUM_THREADS=1 python3 verification/check_joint_return.py
+```
+
+The script builds the contraction and extraction maps in normalized occupation bases for seven pure allocations. It checks the exact success effect and the full target with returned specimens on seeded complex inputs. It also diagonalizes the Gram operator, checks the moments of the polar construction and evaluates the squared fidelity of its output. The [joint-return proof](../science/exact_joint_return.md) supplies the arbitrary-processor converse and the dimension-uniform guarantee.
+
 ## Construction checks
 
 For

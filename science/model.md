@@ -96,6 +96,10 @@ with independent counts. All vacuum outcomes, surplus and rejected filters are c
 
 These exact allocation theorems and the total-copy theorem below answer different questions. The former uses exact rank-one accepted output and determines finite per-stream success. The latter permits approximate output, minimizes a total hard budget and establishes the dimension-uniform square-root law. Neither is a separate approximate lower bound on each stream.
 
+## Pure joint return
+
+For $`n,m\ge1`$ pure specimens, the [joint-return task](exact_joint_return.md) adds the exact product of $`n-1`$ ordinary and $`m-1`$ conjugate specimens to the ideal purification output. Under that joint exactness requirement, the optimal heralded success is $`2M/(d+2M-1)`$ for $`M=\max(n,m)`$. Under deterministic approximate joint return, the polar construction gives squared fidelity at least $`nm/[nm+(d-1)/4]`$ with the full product. The pure joint contract and the mixed-source allocation theorem use different supplied specimens.
+
 ## Fidelity and success conventions
 
 For a normalized output state $`\sigma`$, define its squared fidelity with the pure target by
